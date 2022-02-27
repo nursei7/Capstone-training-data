@@ -3,7 +3,6 @@
 1,<|endoftext|>decode a hex string '4a4b4c' to UTF-8.: bytes.fromhex('4a4b4c').decode('utf-8')<|endoftext|>
 2,<|endoftext|>check if all elements in list `myList` are identical: all(x == myList[0] for x in myList)<|endoftext|>
 3,"<|endoftext|>format number of spaces between strings `Python`, `:` and `Very Good` to be `20`: print('%*s : %*s' % (20, 'Python', 20, 'Very Good'))<|endoftext|>"
-4,
 5,"<|endoftext|>get rid of None values in dictionary `kwargs`: res = {k: v for k, v in list(kwargs.items()) if v is not None}<|endoftext|>"
 6,"<|endoftext|>get rid of None values in dictionary `kwargs`: res = dict((k, v) for k, v in kwargs.items() if v is not None)<|endoftext|>"
 7,"<|endoftext|>capture final output of a chain of system commands `ps -ef | grep something | wc -l`: subprocess.check_output('ps -ef | grep something | wc -l', shell=True)<|endoftext|>"
@@ -19,7 +18,6 @@
 17,<|endoftext|>enable warnings using action 'always': warnings.simplefilter('always')<|endoftext|>
 18,"<|endoftext|>concatenate items of list `l` with a space ' ': print(' '.join(map(str, l)))<|endoftext|>"
 19,"<|endoftext|>run script 'hello.py' with argument 'htmlfilename.htm' on terminal using python executable: subprocess.call(['python.exe', 'hello.py', 'htmlfilename.htm'])<|endoftext|>"
-20,
 21,"<|endoftext|>convert a string `my_string` with dot and comma into a float number `my_float`: my_float = float(my_string.replace(',', ''))<|endoftext|>"
 22,"<|endoftext|>convert a string `123,456.908` with dot and comma into a floating number: float('123,456.908'.replace(',', ''))<|endoftext|>"
 23,<|endoftext|>set pythonpath in python script.: sys.path.append('/path/to/whatever')<|endoftext|>
@@ -78,14 +76,12 @@ with open('10MB', 'wb') as handle:
 56,"<|endoftext|>encode binary string 'your string' to base64 code: base64.b64encode(bytes('your string', 'utf-8'))<|endoftext|>"
 57,"<|endoftext|>combine list of dictionaries `dicts` with the same keys in each list to a single dictionary: dict((k, [d[k] for d in dicts]) for k in dicts[0])<|endoftext|>"
 58,<|endoftext|>Merge a nested dictionary `dicts` into a flat dictionary by concatenating nested values with the same key `k`: {k: [d[k] for d in dicts] for k in dicts[0]}<|endoftext|>
-59,
 60,"<|endoftext|>identify duplicate values in list `mylist`: [k for k, v in list(Counter(mylist).items()) if v > 1]<|endoftext|>"
 61,"<|endoftext|>Insert directory 'apps' into directory `__file__`: sys.path.insert(1, os.path.join(os.path.dirname(__file__), 'apps'))<|endoftext|>"
 62,"<|endoftext|>modify sys.path for python module `subdir`: sys.path.append(os.path.join(os.path.dirname(__file__), 'subdir'))<|endoftext|>"
 63,"<|endoftext|>Insert a 'None' value into a SQLite3 table.: db.execute(""INSERT INTO present VALUES('test2', ?, 10)"", (None,))<|endoftext|>"
 64,<|endoftext|>flatten list `list_of_menuitems`: [image for menuitem in list_of_menuitems for image in menuitem]<|endoftext|>
 65,<|endoftext|>append elements of a set `b` to a list `a`: a.extend(b)<|endoftext|>
-66,
 67,"<|endoftext|>write the data of dataframe `df` into text file `np.txt`: np.savetxt('c:\\data\\np.txt', df.values, fmt='%d')<|endoftext|>"
 68,"<|endoftext|>write content of DataFrame `df` into text file 'c:\\data\\pandas.txt': df.to_csv('c:\\data\\pandas.txt', header=None, index=None, sep=' ', mode='a')<|endoftext|>"
 69,<|endoftext|>Split a string `x` by last occurrence of character `-`: print(x.rpartition('-')[0])<|endoftext|>
@@ -101,7 +97,6 @@ with open('10MB', 'wb') as handle:
     for f in filenames:
         pass<|endoftext|>"
 77,<|endoftext|>create a random list of integers: [int(1000 * random.random()) for i in range(10000)]<|endoftext|>
-78,
 79,"<|endoftext|>Google App Engine execute GQL query 'SELECT * FROM Schedule WHERE station = $1' with parameter `foo.key()`: db.GqlQuery('SELECT * FROM Schedule WHERE station = $1', foo.key())<|endoftext|>"
 80,<|endoftext|>filter rows in pandas starting with alphabet 'f' using regular expression.: df.b.str.contains('^f')<|endoftext|>
 81,<|endoftext|>print a 2 dimensional list `tab` as a table with delimiters: print('\n'.join('\t'.join(str(col) for col in row) for row in tab))<|endoftext|>
@@ -132,7 +127,6 @@ with open('10MB', 'wb') as handle:
 106,<|endoftext|>get the content of child tag with`href` attribute whose parent has css `someclass`: self.driver.find_element_by_css_selector('.someclass a').get_attribute('href')<|endoftext|>
 107,"<|endoftext|>joining data from dataframe `df1` with data from dataframe `df2` based on matching values of column 'Date_Time' in both dataframes: df1.merge(df2, on='Date_Time')<|endoftext|>"
 108,"<|endoftext|>use `%s` operator to print variable values `str1` inside a string: 'first string is: %s, second one is: %s' % (str1, 'geo.tif')<|endoftext|>"
-109,
 110,"<|endoftext|>check if directory `directory ` exists and create it if necessary: if (not os.path.exists(directory)):
     os.makedirs(directory)<|endoftext|>"
 111,"<|endoftext|>check if a directory `path` exists and create it if necessary: try:
@@ -223,10 +217,8 @@ except OSError as exception:
 188,<|endoftext|>find a value within nested json 'data' where the key inside another key 'B' is unknown.: list(data['A']['B'].values())[0]['maindata'][0]['Info']<|endoftext|>
 189,<|endoftext|>check characters of string `string` are true predication of function `predicate`: all(predicate(x) for x in string)<|endoftext|>
 190,<|endoftext|>determine number of files on a drive with python: os.statvfs('/').f_files - os.statvfs('/').f_ffree<|endoftext|>
-191,
 192,"<|endoftext|>convert string `user_input` into a list of integers `user_list`: user_list = [int(number) for number in user_input.split(',')]<|endoftext|>"
 193,"<|endoftext|>Get a list of integers by splitting  a string `user` with comma: [int(s) for s in user.split(',')]<|endoftext|>"
-194,
 195,"<|endoftext|>sort a list of objects `ut`, based on a function `cmpfun` in descending order: ut.sort(key=cmpfun, reverse=True)<|endoftext|>"
 196,"<|endoftext|>reverse list `ut` based on the `count` attribute of each object: ut.sort(key=lambda x: x.count, reverse=True)<|endoftext|>"
 197,"<|endoftext|>sort a list of objects `ut` in reverse order by their `count` property: ut.sort(key=lambda x: x.count, reverse=True)<|endoftext|>"
@@ -234,7 +226,6 @@ except OSError as exception:
 199,<|endoftext|>click a href button having text `Send InMail` with selenium: driver.findElement(By.linkText('Send InMail')).click()<|endoftext|>
 200,<|endoftext|>click a href button with text 'Send InMail' with selenium: driver.find_element_by_link_text('Send InMail').click()<|endoftext|>
 201,<|endoftext|>cast an int `i` to a string and concat to string 'ME': 'ME' + str(i)<|endoftext|>
-202,
 203,"<|endoftext|>prepend the line '#test firstline\n' to the contents of file 'infile' and save as the file 'outfile': open('outfile', 'w').write('#test firstline\n' + open('infile').read())<|endoftext|>"
 204,"<|endoftext|>sort a list `l` by length of value in tuple: l.sort(key=lambda t: len(t[1]), reverse=True)<|endoftext|>"
 205,"<|endoftext|>split string `s` by words that ends with 'd': re.findall('\\b(\\w+)d\\b', s)<|endoftext|>"
@@ -252,7 +243,6 @@ except OSError as exception:
 217,"<|endoftext|>select values from column 'A' for which corresponding values in column 'B' will be greater than 50, and in column 'C' - equal 900 in dataframe `df`: df['A'][(df['B'] > 50) & (df['C'] == 900)]<|endoftext|>"
 218,<|endoftext|>Sort dictionary `o` in ascending order based on its keys and items: sorted(o.items())<|endoftext|>
 219,<|endoftext|>get sorted list of keys of dict `d`: sorted(d)<|endoftext|>
-220,
 221,"<|endoftext|>convert string ""1"" into integer: int('1')<|endoftext|>"
 222,<|endoftext|>function to convert strings into integers: int()<|endoftext|>
 223,"<|endoftext|>convert items in `T1` to integers: T2 = [map(int, x) for x in T1]<|endoftext|>"
@@ -264,7 +254,6 @@ except OSError as exception:
 229,"<|endoftext|>parse tab-delimited CSV file 'text.txt' into a list: lol = list(csv.reader(open('text.txt', 'rb'), delimiter='\t'))<|endoftext|>"
 230,"<|endoftext|>Get attribute `my_str` of object `my_object`: getattr(my_object, my_str)<|endoftext|>"
 231,"<|endoftext|>group a list of dicts `LD` into one dict by key: print(dict(zip(LD[0], zip(*[list(d.values()) for d in LD]))))<|endoftext|>"
-232,
 233,"<|endoftext|>convert unicode string u""{'code1':1,'code2':1}"" into dictionary: d = ast.literal_eval(""{'code1':1,'code2':1}"")<|endoftext|>"
 234,<|endoftext|>find all words in a string `mystring` that start with the `$` sign: [word for word in mystring.split() if word.startswith('$')]<|endoftext|>
 235,"<|endoftext|>remove any url within string `text`: text = re.sub('^https?:\\/\\/.*[\\r\\n]*', '', text, flags=re.MULTILINE)<|endoftext|>"
@@ -283,7 +272,6 @@ except OSError as exception:
 248,<|endoftext|>Retrieve each line from a file 'File.txt' as a list: [line.split() for line in open('File.txt')]<|endoftext|>
 249,"<|endoftext|>swap keys with values in a dictionary `a`: res = dict((v, k) for k, v in a.items())<|endoftext|>"
 250,"<|endoftext|>Open a file `path/to/FILE_NAME.ext` in write mode: new_file = open('path/to/FILE_NAME.ext', 'w')<|endoftext|>"
-251,
 252,<|endoftext|>Check if any key in the dictionary `dict1` starts with the string `EMP$$`: any(key.startswith('EMP$$') for key in dict1)<|endoftext|>
 253,"<|endoftext|>create list of values from dictionary `dict1` that have a key that starts with 'EMP$$': [value for key, value in list(dict1.items()) if key.startswith('EMP$$')]<|endoftext|>"
 254,"<|endoftext|>convert a pandas series `sf` into a pandas dataframe `df` with columns `email` and `list`: pd.DataFrame({'email': sf.index, 'list': sf.values})<|endoftext|>"
@@ -322,7 +310,6 @@ except ValueError:
 280,"<|endoftext|>convert list of tuples `L` to a string: """""", """""".join('(' + ', '.join(i) + ')' for i in L)<|endoftext|>"
 281,"<|endoftext|>Django set default value of field `b` equal to '0000000': b = models.CharField(max_length=7, default='0000000', editable=False)<|endoftext|>"
 282,"<|endoftext|>Sort lis `list5` in ascending order based on the degrees value of its elements: sorted(list5, lambda x: (degree(x), x))<|endoftext|>"
-283,
 284,"<|endoftext|>convert a list  into a generator object: (n for n in [1, 2, 3, 5])<|endoftext|>"
 285,"<|endoftext|>remove elements from list `oldlist` that have an index number mentioned in list `removelist`: newlist = [v for i, v in enumerate(oldlist) if i not in removelist]<|endoftext|>"
 286,"<|endoftext|>Open a file `yourfile.txt` in write mode: f = open('yourfile.txt', 'w')<|endoftext|>"
@@ -330,7 +317,6 @@ except ValueError:
 288,"<|endoftext|>convert tuple of tuples `(('aa',), ('bb',), ('cc',))` to tuple: from functools import reduce
 reduce(lambda a, b: a + b, (('aa',), ('bb',), ('cc',)))<|endoftext|>"
 289,"<|endoftext|>convert tuple of tuples `(('aa',), ('bb',), ('cc',))` to list in one line: map(lambda a: a[0], (('aa',), ('bb',), ('cc',)))<|endoftext|>"
-290,
 291,"<|endoftext|>unzip the list `[('a', 1), ('b', 2), ('c', 3), ('d', 4)]`: zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4)])<|endoftext|>"
 292,"<|endoftext|>unzip the list `[('a', 1), ('b', 2), ('c', 3), ('d', 4)]`: zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4)])<|endoftext|>"
 293,"<|endoftext|>unzip list `original`: result = ([a for (a, b) in original], [b for (a, b) in original])<|endoftext|>"
@@ -350,7 +336,6 @@ reduce(lambda a, b: a + b, (('aa',), ('bb',), ('cc',)))<|endoftext|>"
 307,"<|endoftext|>Get a list of integers `lst` from a file `filename.txt`: lst = map(int, open('filename.txt').readlines())<|endoftext|>"
 308,"<|endoftext|>add color bar with image `mappable` to plot `plt`: plt.colorbar(mappable=mappable, cax=ax3)<|endoftext|>"
 309,<|endoftext|>count most frequent 100 words in column 'text' of dataframe `df`: Counter(' '.join(df['text']).split()).most_common(100)<|endoftext|>
-310,
 311,"<|endoftext|>generate all 2-element subsets of tuple `(1, 2, 3)`: list(itertools.combinations((1, 2, 3), 2))<|endoftext|>"
 312,<|endoftext|>get a value of datetime.today() in the UTC time zone: datetime.now(pytz.utc)<|endoftext|>
 313,<|endoftext|>Get a new list `list2`by removing empty list from a list of lists `list1`: list2 = [x for x in list1 if x != []]<|endoftext|>
@@ -368,7 +353,6 @@ reduce(lambda a, b: a + b, (('aa',), ('bb',), ('cc',)))<|endoftext|>"
 325,"<|endoftext|>average each two columns of array `data`: data.reshape(-1, j).mean(axis=1).reshape(data.shape[0], -1)<|endoftext|>"
 326,"<|endoftext|>double backslash escape all double quotes in string `s`: print(s.encode('unicode-escape').replace('""', '\\""'))<|endoftext|>"
 327,"<|endoftext|>split a string into a list of words and whitespace: re.split('(\\W+)', s)<|endoftext|>"
-328,
 329,<|endoftext|>reverse the keys and values in a dictionary `myDictionary`: {i[1]: i[0] for i in list(myDictionary.items())}<|endoftext|>
 330,"<|endoftext|>finding the index of elements containing substring 'how' and 'what' in a list of strings 'myList'.: [i for i, j in enumerate(myList) if 'how' in j.lower() or 'what' in j.lower()]<|endoftext|>"
 331,"<|endoftext|>check if object `obj` is a string: isinstance(obj, str)<|endoftext|>"
@@ -431,8 +415,6 @@ reduce(lambda a, b: a + b, (('aa',), ('bb',), ('cc',)))<|endoftext|>"
 387,"<|endoftext|>Flask set folder 'wherever' as the default template folder: Flask(__name__, template_folder='wherever')<|endoftext|>"
 388,<|endoftext|>How do I INSERT INTO t1 (SELECT * FROM t2) in SQLAlchemy?: session.execute('INSERT INTO t1 (SELECT * FROM t2)')<|endoftext|>
 389,<|endoftext|>sort a list of lists 'c2' such that third row comes first: c2.sort(key=lambda row: row[2])<|endoftext|>
-390,
-391,
 392,"<|endoftext|>set font `Arial` to display non-ascii characters in matplotlib: matplotlib.rc('font', **{'sans-serif': 'Arial', 'family': 'sans-serif'})<|endoftext|>"
 393,<|endoftext|>Convert  DateTime column 'date' of pandas dataframe 'df' to ordinal: df['date'].apply(lambda x: x.toordinal())<|endoftext|>
 394,<|endoftext|>get html source of Selenium WebElement `element`: element.get_attribute('innerHTML')<|endoftext|>
@@ -460,7 +442,6 @@ reduce(lambda a, b: a + b, (('aa',), ('bb',), ('cc',)))<|endoftext|>"
 416,"<|endoftext|>delete all occurrences of character 'i' in string 'it is icy': """""""""""".join([char for char in 'it is icy' if char != 'i'])<|endoftext|>"
 417,"<|endoftext|>delete all instances of a character 'i' in a string 'it is icy': re.sub('i', '', 'it is icy')<|endoftext|>"
 418,"<|endoftext|>delete all characters ""i"" in string ""it is icy"": """"""it is icy"""""".replace('i', '')<|endoftext|>"
-419,
 420,"<|endoftext|>Drop rows of pandas dataframe `df` having NaN in column at index ""1"": df.dropna(subset=[1])<|endoftext|>"
 421,"<|endoftext|>get elements from list `myList`, that have a field `n` value 30: [x for x in myList if x.n == 30]<|endoftext|>"
 422,<|endoftext|>converting list of strings `intstringlist` to list of integer `nums`: nums = [int(x) for x in intstringlist]<|endoftext|>
@@ -497,7 +478,6 @@ for file in glob.glob('*.txt'):
 442,"<|endoftext|>Sort a list of dictionary `l` based on key `time` in descending order: l = sorted(l, key=lambda a: a['time'], reverse=True)<|endoftext|>"
 443,<|endoftext|>get rows of dataframe `df` that match regex '(Hel|Just)': df.loc[df[0].str.contains('(Hel|Just)')]<|endoftext|>
 444,"<|endoftext|>find the string in `your_string` between two special characters ""["" and ""]"": re.search('\\[(.*)\\]', your_string).group(1)<|endoftext|>"
-445,
 446,"<|endoftext|>count number of times string 'brown' occurred in string 'The big brown fox is brown': """"""The big brown fox is brown"""""".count('brown')<|endoftext|>"
 447,<|endoftext|>decode json string `request.body` to python dict: json.loads(request.body)<|endoftext|>
 448,"<|endoftext|>download the file from url `url` and save it under file `file_name`: urllib.request.urlretrieve(url, file_name)<|endoftext|>"
@@ -511,9 +491,6 @@ for file in glob.glob('*.txt'):
 456,"<|endoftext|>get all the elements except strings from the list 'lst'.: [element for element in lst if not isinstance(element, str)]<|endoftext|>"
 457,"<|endoftext|>Sort a list of dictionaries `list_to_be_sorted` by the value of the dictionary key `name`: newlist = sorted(list_to_be_sorted, key=lambda k: k['name'])<|endoftext|>"
 458,"<|endoftext|>sort a list of dictionaries `l` by values in key `name` in descending order: newlist = sorted(l, key=itemgetter('name'), reverse=True)<|endoftext|>"
-459,
-460,
-461,
 462,"<|endoftext|>join together with "","" elements inside a list indexed with 'category' within a dictionary `trans`: """""","""""".join(trans['category'])<|endoftext|>"
 463,"<|endoftext|>concatenate array of strings `['A', 'B', 'C', 'D']` into a string: """""""""""".join(['A', 'B', 'C', 'D'])<|endoftext|>"
 464,<|endoftext|>get json data from restful service 'url': json.load(urllib.request.urlopen('url'))<|endoftext|>

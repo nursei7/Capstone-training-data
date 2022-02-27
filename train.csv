@@ -9,7 +9,6 @@
 7,"<|endoftext|>normalize a pandas dataframe `df` by row: df.div(df.sum(axis=1), axis=0)<|endoftext|>"
 8,"<|endoftext|>swap values in a tuple/list inside a list `mylist`: map(lambda t: (t[1], t[0]), mylist)<|endoftext|>"
 9,"<|endoftext|>Swap values in a tuple/list in list `mylist`: [(t[1], t[0]) for t in mylist]<|endoftext|>"
-10,
 11,"<|endoftext|>find all occurrences of the pattern '\\[[^\\]]*\\]|\\([^\\)]*\\)|""[^""]*""|\\S+' within `strs`: re.findall('\\[[^\\]]*\\]|\\([^\\)]*\\)|""[^""]*""|\\S+', strs)<|endoftext|>"
 12,"<|endoftext|>generate the combinations of 3 from a set `{1, 2, 3, 4}`: print(list(itertools.combinations({1, 2, 3, 4}, 3)))<|endoftext|>"
 13,"<|endoftext|>add multiple columns `hour`, `weekday`, `weeknum` to pandas data frame `df` from lambda function `lambdafunc`: df[['hour', 'weekday', 'weeknum']] = df.apply(lambdafunc, axis=1)<|endoftext|>"
@@ -18,9 +17,7 @@
 16,<|endoftext|>parse string `s` to int when string contains a number: int(''.join(c for c in s if c.isdigit()))<|endoftext|>
 17,<|endoftext|>add dictionary `{'class': {'section': 5}}` to key 'Test' of dictionary `dic`: dic['Test'].update({'class': {'section': 5}})<|endoftext|>
 18,"<|endoftext|>transforming the string `s` into dictionary: dict(map(int, x.split(':')) for x in s.split(','))<|endoftext|>"
-19,
 20,"<|endoftext|>find rows matching `(0,1)` in a 2 dimensional numpy array `vals`: np.where((vals == (0, 1)).all(axis=1))<|endoftext|>"
-21,
 22,"<|endoftext|>build a dictionary containing the conversion of each list in list `[['two', 2], ['one', 1]]` to a key/value pair as its items: dict([['two', 2], ['one', 1]])<|endoftext|>"
 23,"<|endoftext|>convert list `l` to dictionary having each two adjacent elements as key/value pair: dict(zip(l[::2], l[1::2]))<|endoftext|>"
 24,<|endoftext|>assign float 9.8 to variable `GRAVITY`: GRAVITY = 9.8<|endoftext|>
@@ -42,7 +39,6 @@
 40,"<|endoftext|>get list of duplicated elements in range of 3: [y for x in range(3) for y in [x, x]]<|endoftext|>"
 41,<|endoftext|>read the contents of the file 'file.txt' into `txt`: txt = open('file.txt').read()<|endoftext|>
 42,<|endoftext|>divide each element in list `myList` by integer `myInt`: myList[:] = [(x / myInt) for x in myList]<|endoftext|>
-43,
 44,"<|endoftext|>replace white spaces in dataframe `df` with '_': df.replace(' ', '_', regex=True)<|endoftext|>"
 45,"<|endoftext|>convert date `my_date` to datetime: datetime.datetime.combine(my_date, datetime.time.min)<|endoftext|>"
 46,<|endoftext|>convert tuple `tst` to string `tst2`: tst2 = str(tst)<|endoftext|>
@@ -92,14 +88,12 @@
 90,"<|endoftext|>Get the value of the minimum element in the second column of array `a`: a[np.argmin(a[:, (1)])]<|endoftext|>"
 91,<|endoftext|>extend dictionary `a` with key/value pairs of dictionary `b`: a.update(b)<|endoftext|>
 92,"<|endoftext|>removing key values pairs with key 'mykey1' from a list of dictionaries `mylist`: [{k: v for k, v in d.items() if k != 'mykey1'} for d in mylist]<|endoftext|>"
-93,
 94,"<|endoftext|>create 3 by 3 matrix of random numbers: numpy.random.random((3, 3))<|endoftext|>"
 95,<|endoftext|>make new column 'C' in panda dataframe by adding values from other columns 'A' and 'B': df['C'] = df['A'] + df['B']<|endoftext|>
 96,"<|endoftext|>create a list of values from the dictionary `programs` that have a key with a case insensitive match to 'new york': [value for key, value in list(programs.items()) if 'new york' in key.lower()]<|endoftext|>"
 97,<|endoftext|>append a path `/path/to/main_folder` in system path: sys.path.append('/path/to/main_folder')<|endoftext|>
 98,"<|endoftext|>get all digits in a string `s` after a '[' character: re.findall('\\d+(?=[^[]+$)', s)<|endoftext|>"
 99,"<|endoftext|>python pickle/unpickle a list to/from a file 'afile': pickle.load(open('afile', 'rb'))<|endoftext|>"
-100,
 101,<|endoftext|>count unique index values in column 'A' in pandas dataframe `ex`: ex.groupby(level='A').agg(lambda x: x.index.get_level_values(1).nunique())<|endoftext|>
 102,"<|endoftext|>Create a pandas dataframe of values from a dictionary `d` which contains dictionaries of dictionaries: pd.concat(map(pd.DataFrame, iter(d.values())), keys=list(d.keys())).stack().unstack(0)<|endoftext|>"
 103,"<|endoftext|>find out the number of non-matched elements at the same index of list `a` and list `b`: sum(1 for i, j in zip(a, b) if i != j)<|endoftext|>"
@@ -131,7 +125,6 @@
 129,<|endoftext|>get canonical path of the filename `path`: os.path.realpath(path)<|endoftext|>
 130,<|endoftext|>check if dictionary `L[0].f.items()` is in dictionary `a3.f.items()`: set(L[0].f.items()).issubset(set(a3.f.items()))<|endoftext|>
 131,<|endoftext|>find all the indexes in a Numpy 2D array where the value is 1: zip(*np.where(a == 1))<|endoftext|>
-132,
 133,<|endoftext|>Collapse hierarchical column index to level 0 in dataframe `df`: df.columns = df.columns.get_level_values(0)<|endoftext|>
 134,"<|endoftext|>create a matrix from a list `[1, 2, 3]`: x = scipy.matrix([1, 2, 3]).transpose()<|endoftext|>"
 135,"<|endoftext|>add character '@' after word 'get' in string `text`: text = re.sub('(\\bget\\b)', '\\1@', text)<|endoftext|>"
@@ -146,7 +139,6 @@
 144,<|endoftext|>find all files with extension '.c' in directory `folder`: results += [each for each in os.listdir(folder) if each.endswith('.c')]<|endoftext|>
 145,<|endoftext|>add unicode string '1' to UTF-8 decoded string '\xc2\xa3': print('\xc2\xa3'.decode('utf8') + '1')<|endoftext|>
 146,"<|endoftext|>lower-case the string obtained by replacing the occurrences of regex pattern '(?<=[a-z])([A-Z])' in string `s` with eplacement '-\\1': re.sub('(?<=[a-z])([A-Z])', '-\\1', s).lower()<|endoftext|>"
-147,
 148,"<|endoftext|>format a string `num` using string formatting: """"""{0:.3g}"""""".format(num)<|endoftext|>"
 149,"<|endoftext|>append the first element of array `a` to array `a`: numpy.append(a, a[0])<|endoftext|>"
 150,"<|endoftext|>return the column for value 38.15 in dataframe `df`: df.ix[:, (df.loc[0] == 38.15)].columns<|endoftext|>"
@@ -206,12 +198,10 @@
 202,"<|endoftext|>replace percent-encoded code in request `f` to their single-character equivalent: f = urllib.request.urlopen(url, urllib.parse.unquote(urllib.parse.urlencode(params)))<|endoftext|>"
 203,"<|endoftext|>remove white spaces from the end of string ""    xyz     "": """"""    xyz     """""".rstrip()<|endoftext|>"
 204,<|endoftext|>Replace special characters in utf-8 encoded string `s` using the %xx escape: urllib.parse.quote(s.encode('utf-8'))<|endoftext|>
-205,
 206,"<|endoftext|>Create an array containing the conversion of string '100110' into separate elements: np.array(map(int, '100110'))<|endoftext|>"
 207,"<|endoftext|>convert a string 'mystr' to numpy array of integer values: print(np.array(list(mystr), dtype=int))<|endoftext|>"
 208,"<|endoftext|>convert an rgb image 'messi5.jpg' into grayscale `img`: img = cv2.imread('messi5.jpg', 0)<|endoftext|>"
 209,"<|endoftext|>sort list `lst` in descending order based on the second item of each tuple in it: lst.sort(key=lambda x: x[2], reverse=True)<|endoftext|>"
-210,
 211,"<|endoftext|>execute shell command 'grep -r PASSED *.log | sort -u | wc -l' with a | pipe in it: subprocess.call('grep -r PASSED *.log | sort -u | wc -l', shell=True)<|endoftext|>"
 212,<|endoftext|>count the number of trailing question marks in string `my_text`: len(my_text) - len(my_text.rstrip('?'))<|endoftext|>
 213,"<|endoftext|>remove dollar sign '$' from second to last column data in dataframe 'df' and convert the data into floats: df[df.columns[1:]].replace('[\\$,]', '', regex=True).astype(float)<|endoftext|>"
@@ -227,7 +217,6 @@
 223,"<|endoftext|>print string including multiple variables `name` and `score`: print(('Total score for', name, 'is', score))<|endoftext|>"
 224,"<|endoftext|>serve a static html page 'your_template.html' at the root of a django project: url('^$', TemplateView.as_view(template_name='your_template.html'))<|endoftext|>"
 225,"<|endoftext|>use a list of values `[3,6]` to select rows from a pandas dataframe `df`'s column 'A': df[df['A'].isin([3, 6])]<|endoftext|>"
-226,
 227,<|endoftext|>execute python code `myscript.py` in a virtualenv `/path/to/my/venv` from matlab: system('/path/to/my/venv/bin/python myscript.py')<|endoftext|>
 228,"<|endoftext|>django return a QuerySet list containing the values of field 'eng_name' in model `Employees`: Employees.objects.values_list('eng_name', flat=True)<|endoftext|>"
 229,"<|endoftext|>find all digits in string '6,7)' and put them to a list: re.findall('\\d|\\d,\\d\\)', '6,7)')<|endoftext|>"
@@ -248,7 +237,6 @@
 244,<|endoftext|>extract all keys from a list of dictionaries `LoD`: [i for s in [list(d.keys()) for d in LoD] for i in s]<|endoftext|>
 245,"<|endoftext|>unpack keys and values of a dictionary `d` into two lists: keys, values = zip(*list(d.items()))<|endoftext|>"
 246,<|endoftext|>convert a string `s` containing a decimal to an integer: int(Decimal(s))<|endoftext|>
-247,
 248,"<|endoftext|>check if array `b` contains all elements of array `a`: numpy.in1d(b, a).all()<|endoftext|>"
 249,<|endoftext|>numpy:  check if array 'a' contains all the numbers in array 'b'.: numpy.array([(x in a) for x in b])<|endoftext|>
 250,"<|endoftext|>Draw node labels `labels` on networkx graph `G ` at position `pos`: networkx.draw_networkx_labels(G, pos, labels)<|endoftext|>"
@@ -256,7 +244,6 @@
 252,"<|endoftext|>Create 2D numpy array from the data provided in 'somefile.csv' with each row in the file having same number of values: X = numpy.loadtxt('somefile.csv', delimiter=',')<|endoftext|>"
 253,<|endoftext|>get a list of items from the list `some_list` that contain string 'abc': matching = [s for s in some_list if 'abc' in s]<|endoftext|>
 254,"<|endoftext|>export a pandas data frame `df` to a file `mydf.tsv` and retain the indices: df.to_csv('mydf.tsv', sep='\t')<|endoftext|>"
-255,
 256,"<|endoftext|>split a string `s` on last delimiter: s.rsplit(',', 1)<|endoftext|>"
 257,"<|endoftext|>Check if all elements in list `lst` are tupples of long and int: all(isinstance(x, int) for x in lst)<|endoftext|>"
 258,"<|endoftext|>check if all elements in a list 'lst' are the same type 'int': all(isinstance(x, int) for x in lst)<|endoftext|>"
@@ -281,7 +268,6 @@
 277,"<|endoftext|>concatenate dataframe `df1` with `df2` whilst removing duplicates: pandas.concat([df1, df2]).drop_duplicates().reset_index(drop=True)<|endoftext|>"
 278,"<|endoftext|>Construct an array with data type float32 `a` from data in binary file 'filename': a = numpy.fromfile('filename', dtype=numpy.float32)<|endoftext|>"
 279,"<|endoftext|>execute a mv command `mv /home/somedir/subdir/* somedir/` in subprocess: subprocess.call('mv /home/somedir/subdir/* somedir/', shell=True)<|endoftext|>"
-280,
 281,<|endoftext|>print a character that has unicode value `\u25b2`: print('\u25b2'.encode('utf-8'))<|endoftext|>
 282,"<|endoftext|>compare contents  at filehandles `file1` and `file2` using difflib: difflib.SequenceMatcher(None, file1.read(), file2.read())<|endoftext|>"
 283,"<|endoftext|>Create a dictionary from string `e` separated by `-` and `,`: dict((k, int(v)) for k, v in (e.split(' - ') for e in s.split(',')))<|endoftext|>"
@@ -319,7 +305,6 @@
 314,<|endoftext|>convert string `x'  to dictionary splitted by `=` using list comprehension: dict([x.split('=') for x in s.split()])<|endoftext|>
 315,<|endoftext|>remove index 2 element from a list `my_list`: my_list.pop(2)<|endoftext|>
 316,"<|endoftext|>Delete character ""M"" from a string `s` using python: s = s.replace('M', '')<|endoftext|>"
-317,
 318,"<|endoftext|>get the sum of the products of each pair of corresponding elements in lists `a` and `b`: sum(x * y for x, y in zip(a, b))<|endoftext|>"
 319,"<|endoftext|>sum the products of each two elements at the same index of list `a` and list `b`: list(x * y for x, y in list(zip(a, b)))<|endoftext|>"
 320,"<|endoftext|>sum the product of each two items at the same index of list `a` and list `b`: sum(i * j for i, j in zip(a, b))<|endoftext|>"
@@ -335,7 +320,6 @@
 330,<|endoftext|>attach debugger pdb to class `ForkedPdb`: ForkedPdb().set_trace()<|endoftext|>
 331,"<|endoftext|>Compose keys from dictionary `d1` with respective values in dictionary `d2`: result = {k: d2.get(v) for k, v in list(d1.items())}<|endoftext|>"
 332,"<|endoftext|>add one day and three hours to the present time from datetime.now(): datetime.datetime.now() + datetime.timedelta(days=1, hours=3)<|endoftext|>"
-333,
 334,"<|endoftext|>switch keys and values in a dictionary `my_dict`: dict((v, k) for k, v in my_dict.items())<|endoftext|>"
 335,"<|endoftext|>sort a list `L` by number after second '.': print(sorted(L, key=lambda x: int(x.split('.')[2])))<|endoftext|>"
 336,"<|endoftext|>Check if the value of the key ""name"" is ""Test"" in a list of dictionaries `label`: any(d['name'] == 'Test' for d in label)<|endoftext|>"
@@ -344,7 +328,6 @@
 339,"<|endoftext|>convert a list 'a' to a dictionary where each even element represents the key to the dictionary, and the following odd element is the value: b = {a[i]: a[i + 1] for i in range(0, len(a), 2)}<|endoftext|>"
 340,<|endoftext|>check whether elements in list `a` appear only once: len(set(a)) == len(a)<|endoftext|>
 341,"<|endoftext|>Generate MD5 checksum of file in the path `full_path` in hashlib: print(hashlib.md5(open(full_path, 'rb').read()).hexdigest())<|endoftext|>"
-342,
 343,"<|endoftext|>randomly switch letters' cases in string `s`: """""""""""".join(x.upper() if random.randint(0, 1) else x for x in s)<|endoftext|>"
 344,"<|endoftext|>force bash interpreter '/bin/bash' to be used instead of shell: os.system('GREPDB=""echo 123""; /bin/bash -c ""$GREPDB""')<|endoftext|>"
 345,"<|endoftext|>Run a command `echo hello world` in bash instead of shell: os.system('/bin/bash -c ""echo hello world""')<|endoftext|>"
@@ -380,7 +363,6 @@ sentence = re.sub(pattern, '', sentence)<|endoftext|>"
 372,"<|endoftext|>remove all characters from string `stri` upto character 'I': re.sub('.*I', 'I', stri)<|endoftext|>"
 373,"<|endoftext|>parse a comma-separated string number '1,000,000' into int: int('1,000,000'.replace(',', ''))<|endoftext|>"
 374,"<|endoftext|>combine  dataframe `df1` and dataframe `df2` by index number: pd.merge(df1, df2, left_index=True, right_index=True, how='outer')<|endoftext|>"
-375,
 376,<|endoftext|>check if all boolean values in a python dictionary `dict` are true: all(dict.values())<|endoftext|>
 377,"<|endoftext|>use regex pattern '^12(?=.{4}$)' to remove digit 12 if followed by 4 other digits in column `c_contofficeID` of dataframe `df`: df.c_contofficeID.str.replace('^12(?=.{4}$)', '')<|endoftext|>"
 378,<|endoftext|>reverse a list `L`: L[::(-1)]<|endoftext|>
@@ -426,7 +408,6 @@ sentence = re.sub(pattern, '', sentence)<|endoftext|>"
 418,"<|endoftext|>sort a pandas data frame by column `Peak` in ascending and `Weeks` in descending order: df.sort(['Peak', 'Weeks'], ascending=[True, False], inplace=True)<|endoftext|>"
 419,"<|endoftext|>run the code contained in string ""print('Hello')"": eval(""print('Hello')"")<|endoftext|>"
 420,"<|endoftext|>creating a list of dictionaries [{'A': 1, 'C': 4, 'B': 2, 'D': 4}, {'A': 1, 'C': 4, 'B': 1, 'D': 5}]: [{'A': 1, 'C': 4, 'B': 2, 'D': 4}, {'A': 1, 'C': 4, 'B': 1, 'D': 5}]<|endoftext|>"
-421,
 422,<|endoftext|>get all possible combination of items from 2-dimensional list `a`: list(itertools.product(*a))<|endoftext|>
 423,"<|endoftext|>Get sum of values of columns  'Y1961', 'Y1962', 'Y1963' after group by on columns ""Country"" and ""Item_code"" in dataframe `df`.: df.groupby(['Country', 'Item_Code'])[['Y1961', 'Y1962', 'Y1963']].sum()<|endoftext|>"
 424,"<|endoftext|>create list `done` containing permutations of each element in list `[a, b, c, d]` with variable `x` as tuples: done = [(el, x) for el in [a, b, c, d]]<|endoftext|>"
@@ -440,16 +421,13 @@ sentence = re.sub(pattern, '', sentence)<|endoftext|>"
 432,"<|endoftext|>change a string of integers `x` separated by spaces to a list of int: x = map(int, x.split())<|endoftext|>"
 433,<|endoftext|>convert a string of integers `x` separated by spaces to a list of integers: x = [int(i) for i in x.split()]<|endoftext|>
 434,"<|endoftext|>find element by css selector ""input[onclick*='1 Bedroom Deluxe']"": driver.find_element_by_css_selector(""input[onclick*='1 Bedroom Deluxe']"")<|endoftext|>"
-435,
 436,<|endoftext|>display a pdf  file that has been downloaded as `my_pdf.pdf`: webbrowser.open('file:///my_pdf.pdf')<|endoftext|>
 437,"<|endoftext|>replace backslashes in string `result` with empty string '': result = result.replace('\\', '')<|endoftext|>"
 438,"<|endoftext|>remove backslashes from string `result`: result.replace('\\', '')<|endoftext|>"
 439,"<|endoftext|>replace value '-' in any column of pandas dataframe to ""NaN"": df.replace('-', 'NaN')<|endoftext|>"
 440,<|endoftext|>convert datetime object to date object in python: datetime.datetime.now().date()<|endoftext|>
-441,
 442,<|endoftext|>get all sub-elements of an element `a` in an elementtree: [elem.tag for elem in a.iter()]<|endoftext|>
 443,<|endoftext|>get all sub-elements of an element tree `a` excluding the root element: [elem.tag for elem in a.iter() if elem is not a]<|endoftext|>
-444,
 445,"<|endoftext|>move dictionaries in list `lst` to the end of the list if value of key 'language' in each dictionary is not equal to 'en': sorted(lst, key=lambda x: x['language'] != 'en')<|endoftext|>"
 446,<|endoftext|>check if all values of a dictionary `your_dict` are zero `0`: all(value == 0 for value in list(your_dict.values()))<|endoftext|>
 447,"<|endoftext|>produce a pivot table as dataframe using column 'Y' in datafram `df` to form the axes of the resulting dataframe: df.pivot_table('Y', rows='X', cols='X2')<|endoftext|>"
@@ -548,8 +526,6 @@ locale.format('%d', 1255000, grouping=True)<|endoftext|>"
 525,<|endoftext|>urlencode a querystring 'string_of_characters_like_these:$#@=?%^Q^$' in python 2: urllib.parse.quote_plus('string_of_characters_like_these:$#@=?%^Q^$')<|endoftext|>
 526,"<|endoftext|>sort a dictionary `d` by length of its values and print as string: print(' '.join(sorted(d, key=lambda k: len(d[k]), reverse=True)))<|endoftext|>"
 527,"<|endoftext|>convert tuple elements in list `[(1,2),(3,4),(5,6),]` into lists: map(list, zip(*[(1, 2), (3, 4), (5, 6)]))<|endoftext|>"
-528,
-529,
 530,"<|endoftext|>create a list of tuples which contains number 9 and the number before it, for each occurrence of 9 in the list 'myList': [(x, y) for x, y in zip(myList, myList[1:]) if y == 9]<|endoftext|>"
 531,<|endoftext|>navigate to webpage given by url `http://www.python.org` using Selenium: driver.get('http://www.google.com.br')<|endoftext|>
 532,<|endoftext|>reverse a UTF-8 string 'a': b = a.decode('utf8')[::-1].encode('utf8')<|endoftext|>
@@ -651,7 +627,6 @@ reduce(lambda x, y: 10 * x + y, [1, 2, 3, 4, 5])<|endoftext|>"
 618,"<|endoftext|>apply two different aggregating functions `mean` and `sum` to the same column `dummy` in pandas data frame `df`: df.groupby('dummy').agg({'returns': [np.mean, np.sum]})<|endoftext|>"
 619,<|endoftext|>convert string `s` to lowercase: s.lower()<|endoftext|>
 620,<|endoftext|>convert utf-8 string `s` to lowercase: s.decode('utf-8').lower()<|endoftext|>
-621,
 622,"<|endoftext|>handle the `urlfetch_errors ` exception for imaplib request to url `url`: urlfetch.fetch(url, deadline=10 * 60)<|endoftext|>"
 623,<|endoftext|>output first 100 characters in a string `my_string`: print(my_string[0:100])<|endoftext|>
 624,<|endoftext|>make matplotlib plot legend put marker in legend only once: legend(numpoints=1)<|endoftext|>
@@ -694,7 +669,6 @@ reduce(lambda x, y: 10 * x + y, [1, 2, 3, 4, 5])<|endoftext|>"
 661,<|endoftext|>Save plot `plt` as svg file 'test.svg': plt.savefig('test.svg')<|endoftext|>
 662,<|endoftext|>count the number of elements in array `myArray`: len(myArray)<|endoftext|>
 663,"<|endoftext|>insert directory './path/to/your/modules/' to current directory: sys.path.insert(0, './path/to/your/modules/')<|endoftext|>"
-664,
 665,"<|endoftext|>Insert records in bulk from ""table1"" of ""master"" DB to ""table1"" of  sqlite3 `cursor` object: cursor.execute('INSERT OR REPLACE INTO master.table1 SELECT * FROM table1')<|endoftext|>"
 666,"<|endoftext|>Match regex '[a-zA-Z][\\w-]*\\Z' on string 'A\n': re.match('[a-zA-Z][\\w-]*\\Z', 'A\n')<|endoftext|>"
 667,"<|endoftext|>match regex '[a-zA-Z][\\w-]*$' on string '!A_B': re.match('[a-zA-Z][\\w-]*$', '!A_B')<|endoftext|>"
@@ -735,7 +709,6 @@ return text[:(len(text) - len(suffix))]<|endoftext|>"
 699,<|endoftext|>quit program: sys.exit(0)<|endoftext|>
 700,"<|endoftext|>get digits in string `my_string`: """""""""""".join(c for c in my_string if c.isdigit())<|endoftext|>"
 701,"<|endoftext|>split string `str1` on one or more spaces with a regular expression: re.split(' +', str1)<|endoftext|>"
-702,
 703,"<|endoftext|>Evaluate a nested dictionary `myobject.id.number` to get `number` if `myobject` is present with getattr: getattr(getattr(myobject, 'id', None), 'number', None)<|endoftext|>"
 704,<|endoftext|>convert generator object to a dictionary: {i: (i * 2) for i in range(10)}<|endoftext|>
 705,"<|endoftext|>convert generator object to a dictionary: dict((i, i * 2) for i in range(10))<|endoftext|>"
@@ -750,7 +723,6 @@ return text[:(len(text) - len(suffix))]<|endoftext|>"
 714,<|endoftext|>Convert JSON array `array` to Python object: data = json.loads(array)<|endoftext|>
 715,"<|endoftext|>pars a string 'http://example.org/#comments' to extract hashtags into an array: re.findall('#(\\w+)', 'http://example.org/#comments')<|endoftext|>"
 716,<|endoftext|>do a boolean check if a string `lestring` contains any of the items in list `lelist`: any(e in lestring for e in lelist)<|endoftext|>
-717,
 718,"<|endoftext|>Parsing HTML string `html` using BeautifulSoup: parsed_html = BeautifulSoup(html)
 print(parsed_html.body.find('div', attrs={'class': 'container', }).text)<|endoftext|>"
 719,"<|endoftext|>Parsing webpage 'http://www.google.com/' using BeautifulSoup: page = urllib.request.urlopen('http://www.google.com/')
@@ -789,7 +761,6 @@ soup = BeautifulSoup(page)<|endoftext|>"
 744,"<|endoftext|>get max key in dictionary `MyCount`: max(list(MyCount.keys()), key=int)<|endoftext|>"
 745,<|endoftext|>execute command 'source .bashrc; shopt -s expand_aliases; nuke -x scriptPath' from python script: os.system('source .bashrc; shopt -s expand_aliases; nuke -x scriptPath')<|endoftext|>
 746,<|endoftext|>get a name of function `my_function` as a string: my_function.__name__<|endoftext|>
-747,
 748,"<|endoftext|>check if all values in the columns of a numpy matrix `a` are same: np.all(a == a[(0), :], axis=0)<|endoftext|>"
 749,"<|endoftext|>sort list `a` in ascending order based on the addition of the second and third elements of each tuple in it: sorted(a, key=lambda x: (sum(x[1:3]), x[0]))<|endoftext|>"
 750,"<|endoftext|>sort a list of tuples `a` by the sum of second and third element of each tuple: sorted(a, key=lambda x: (sum(x[1:3]), x[0]), reverse=True)<|endoftext|>"
@@ -799,13 +770,11 @@ soup = BeautifulSoup(page)<|endoftext|>"
 754,<|endoftext|>clear session key 'mykey': del request.session['mykey']<|endoftext|>
 755,"<|endoftext|>convert date string '24052010' to date object in format '%d%m%Y': datetime.datetime.strptime('24052010', '%d%m%Y').date()<|endoftext|>"
 756,"<|endoftext|>Replace non-ASCII characters in string `text` with a single space: re.sub('[^\\x00-\\x7F]+', ' ', text)<|endoftext|>"
-757,
 758,<|endoftext|>Get a list `myList` from 1 to 10: myList = [i for i in range(10)]<|endoftext|>
 759,<|endoftext|>use regex pattern '((.+?)\\2+)' to split string '44442(2)2(2)44': [m[0] for m in re.compile('((.+?)\\2+)').findall('44442(2)2(2)44')]<|endoftext|>
 760,"<|endoftext|>use regular expression '((\\d)(?:[()]*\\2*[()]*)*)' to split string `s`: [i[0] for i in re.findall('((\\d)(?:[()]*\\2*[()]*)*)', s)]<|endoftext|>"
 761,"<|endoftext|>remove the space between subplots in matplotlib.pyplot: fig.subplots_adjust(wspace=0, hspace=0)<|endoftext|>"
 762,<|endoftext|>Reverse list `x`: x[::-1]<|endoftext|>
-763,
 764,<|endoftext|>write a list of strings `row` to csv object `csvwriter`: csvwriter.writerow(row)<|endoftext|>
 765,<|endoftext|>Jinja2 formate date `item.date` accorto pattern 'Y M d': {{(item.date | date): 'Y M d'}}<|endoftext|>
 766,"<|endoftext|>Split a string `text` with comma, question mark or exclamation by non-consuming regex using look-behind: re.split('(?<=[\\.\\?!]) ', text)<|endoftext|>"
@@ -813,7 +782,6 @@ soup = BeautifulSoup(page)<|endoftext|>"
 768,<|endoftext|>declare an array `variable`: variable = []<|endoftext|>
 769,<|endoftext|>declare an array with element 'i': intarray = array('i')<|endoftext|>
 770,"<|endoftext|>given list `to_reverse`, reverse the all sublists and the list itself: [sublist[::-1] for sublist in to_reverse[::-1]]<|endoftext|>"
-771,
 772,"<|endoftext|>unescape special characters without splitting data in array of strings `['I ', u'<', '3s U ', u'&', ' you luvz me']`: """""""""""".join(['I ', '<', '3s U ', '&', ' you luvz me'])<|endoftext|>"
 773,<|endoftext|>disable logging while running unit tests in python django: logging.disable(logging.CRITICAL)<|endoftext|>
 774,"<|endoftext|>adding url `url` to mysql row: cursor.execute('INSERT INTO index(url) VALUES(%s)', (url,))<|endoftext|>"
@@ -824,8 +792,6 @@ soup = BeautifulSoup(page)<|endoftext|>"
 779,<|endoftext|>Get the number of NaN values in each column of dataframe `df`: df.isnull().sum()<|endoftext|>
 780,<|endoftext|>reset index of dataframe `df`so that existing index values are transferred into `df`as columns: df.reset_index(inplace=True)<|endoftext|>
 781,<|endoftext|>generate a list containing values associated with the key 'value' of each dictionary inside list `list_of_dicts`: [x['value'] for x in list_of_dicts]<|endoftext|>
-782,
-783,
 784,"<|endoftext|>convert numpy array into python list structure: np.array([[1, 2, 3], [4, 5, 6]]).tolist()<|endoftext|>"
 785,"<|endoftext|>converting string '(1,2,3,4)' to a tuple: ast.literal_eval('(1,2,3,4)')<|endoftext|>"
 786,<|endoftext|>keep a list `dataList` of lists sorted as it is created by second element: dataList.sort(key=lambda x: x[1])<|endoftext|>
@@ -841,16 +807,13 @@ soup = BeautifulSoup(page)<|endoftext|>"
 796,<|endoftext|>find all the elements that consists value '1' in a list of tuples 'a': [item for item in a if 1 in item]<|endoftext|>
 797,<|endoftext|>find all elements in a list of tuples `a` where the first element of each tuple equals 1: [item for item in a if item[0] == 1]<|endoftext|>
 798,"<|endoftext|>Get the index value in list `p_list` using enumerate in list comprehension: {p.id: {'id': p.id, 'position': ind} for ind, p in enumerate(p_list)}<|endoftext|>"
-799,
 800,"<|endoftext|>load a file `file.py` into the python console: exec(compile(open('file.py').read(), 'file.py', 'exec'))<|endoftext|>"
 801,<|endoftext|>SQLAlchemy count the number of rows in table `Congress`: rows = session.query(Congress).count()<|endoftext|>
-802,
 803,"<|endoftext|>read excel file `file_name` using pandas: dfs = pd.read_excel(file_name, sheetname=None)<|endoftext|>"
 804,"<|endoftext|>unpack the binary data represented by the hexadecimal string '4081637ef7d0424a' to a float: struct.unpack('d', binascii.unhexlify('4081637ef7d0424a'))<|endoftext|>"
 805,<|endoftext|>Get index of numpy array `a` with another numpy array `b`: a[tuple(b)]<|endoftext|>
 806,"<|endoftext|>find all possible sequences of elements in a list `[2, 3, 4]`: map(list, permutations([2, 3, 4]))<|endoftext|>"
 807,"<|endoftext|>sort a list `unsorted_list` based on another sorted list `presorted_list`: sorted(unsorted_list, key=presorted_list.index)<|endoftext|>"
-808,
 809,"<|endoftext|>create a dataframe `d` filled with zeros with indices from 0 to length of `data` and column names from `feature_list`: d = pd.DataFrame(0, index=np.arange(len(data)), columns=feature_list)<|endoftext|>"
 810,<|endoftext|>find the index of sub string 'World' in `x`: x.find('World')<|endoftext|>
 811,<|endoftext|>find the index of sub string 'Aloha' in `x`: x.find('Aloha')<|endoftext|>
@@ -864,7 +827,6 @@ soup = BeautifulSoup(page)<|endoftext|>"
 819,"<|endoftext|>find the index of sub string 's' in string `str` starting from index 11 and ending at index 14: str.find('s', 11, 14)<|endoftext|>"
 820,"<|endoftext|>sort list of date strings 'd': sorted(d, key=lambda x: datetime.datetime.strptime(x, '%m-%Y'))<|endoftext|>"
 821,"<|endoftext|>Get all the sentences from a string `text` using regex: re.split('\\.\\s', text)<|endoftext|>"
-822,
 823,"<|endoftext|>get all characters in string 'foobar' up to the fourth index: """"""foobar""""""[:4]<|endoftext|>"
 824,<|endoftext|>cut a string by delimiter '&': s.rfind('&')<|endoftext|>
 825,<|endoftext|>cut a string using delimiter '&': s[:s.rfind('&')]<|endoftext|>
@@ -913,12 +875,10 @@ Img.show<|endoftext|>"
 863,"<|endoftext|>merge lists `a` and `a` into a list of tuples: list(zip(a, b))<|endoftext|>"
 864,<|endoftext|>convert pandas DataFrame `df` to a dictionary using `id` field as the key: df.set_index('id').to_dict()<|endoftext|>
 865,"<|endoftext|>convert pandas dataframe `df` with fields 'id', 'value' to dictionary: df.set_index('id')['value'].to_dict()<|endoftext|>"
-866,
 867,"<|endoftext|>remove parentheses and text within it in string `filename`: re.sub('\\([^)]*\\)', '', filename)<|endoftext|>"
 868,"<|endoftext|>Check if string 'a b' only contains letters and spaces: """"""a b"""""".replace(' ', '').isalpha()<|endoftext|>"
 869,"<|endoftext|>sum each element `x` in list `first` with element `y` at the same index in list `second`.: [(x + y) for x, y in zip(first, second)]<|endoftext|>"
 870,"<|endoftext|>sort a python dictionary `a_dict` by element `1` of the value: sorted(list(a_dict.items()), key=lambda item: item[1][1])<|endoftext|>"
-871,
 872,"<|endoftext|>get index of the biggest 2 values of a list `a`: sorted(list(range(len(a))), key=lambda i: a[i])[-2:]<|endoftext|>"
 873,"<|endoftext|>get indexes of the largest `2` values from a list `a` using itemgetter: zip(*sorted(enumerate(a), key=operator.itemgetter(1)))[0][-2:]<|endoftext|>"
 874,"<|endoftext|>get the indexes of the largest `2` values from a list of integers `a`: sorted(list(range(len(a))), key=lambda i: a[i], reverse=True)[:2]<|endoftext|>"
@@ -933,7 +893,6 @@ Img.show<|endoftext|>"
 883,<|endoftext|>get all column name of dataframe `df` except for column 'T1_V6': df[df.columns - ['T1_V6']]<|endoftext|>
 884,<|endoftext|>get count of values in numpy array `a` that are between values `25` and `100`: ((25 < a) & (a < 100)).sum()<|endoftext|>
 885,<|endoftext|>Get day name from a datetime object: date.today().strftime('%A')<|endoftext|>
-886,
 887,<|endoftext|>Jinja parse datetime object `car.date_of_manufacture` to use format pattern `datetime`: {{car.date_of_manufacture | datetime}}<|endoftext|>
 888,<|endoftext|>Get the date object `date_of_manufacture` of object `car` in string  format '%Y-%m-%d': {{car.date_of_manufacture.strftime('%Y-%m-%d')}}<|endoftext|>
 889,<|endoftext|>make a flat list from list of lists `sublist`: [item for sublist in l for item in sublist]<|endoftext|>
@@ -1006,11 +965,9 @@ sum((j > i))<|endoftext|>"
 952,"<|endoftext|>argparse associate zero or more arguments with flag 'file': parser.add_argument('file', nargs='*')<|endoftext|>"
 953,"<|endoftext|>get a list of booleans `z` that shows wether the corresponding items in list `x` and `y` are equal: z = [(i == j) for i, j in zip(x, y)]<|endoftext|>"
 954,<|endoftext|>create a list which indicates whether each element in `x` and `y` is identical: [(x[i] == y[i]) for i in range(len(x))]<|endoftext|>
-955,
 956,<|endoftext|>create an empty data frame `df2` with index from another data frame `df1`: df2 = pd.DataFrame(index=df1.index)<|endoftext|>
 957,"<|endoftext|>unpack first and second bytes of byte string `pS` into integer: struct.unpack('h', pS[0:2])<|endoftext|>"
 958,"<|endoftext|>print list `t` into a table-like shape: print('\n'.join('  '.join(map(str, row)) for row in t))<|endoftext|>"
-959,
 960,<|endoftext|>check if a checkbox is checked in selenium python webdriver: driver.find_element_by_name('<check_box_name>').is_selected()<|endoftext|>
 961,<|endoftext|>determine if checkbox with id '<check_box_id>' is checked in selenium python webdriver: driver.find_element_by_id('<check_box_id>').is_selected()<|endoftext|>
 962,"<|endoftext|>replace `0` with `2` in the list `[0, 1, 0, 3]`: [(a if a else 2) for a in [0, 1, 0, 3]]<|endoftext|>"
@@ -1045,7 +1002,6 @@ return (r.status_code == 200)<|endoftext|>"
 987,"<|endoftext|>calculate the mean of columns with same name in dataframe `df`: df.groupby(by=df.columns, axis=1).mean()<|endoftext|>"
 988,"<|endoftext|>sort list `bar` by each element's attribute `attrb1` and attribute `attrb2` in reverse order: bar.sort(key=lambda x: (x.attrb1, x.attrb2), reverse=True)<|endoftext|>"
 989,<|endoftext|>get alpha value `alpha` of a png image `img`: alpha = img.split()[-1]<|endoftext|>
-990,
 991,"<|endoftext|>BeautifulSoup find tag 'div' with styling 'width=300px;' in HTML string `soup`: soup.findAll('div', style='width=300px;')<|endoftext|>"
 992,"<|endoftext|>Execute SQL statement `sql` with values of dictionary `myDict` as parameters: cursor.execute(sql, list(myDict.values()))<|endoftext|>"
 993,"<|endoftext|>Convert CSV file `Result.csv` to Pandas dataframe using separator ' ': df.to_csv('Result.csv', index=False, sep=' ')<|endoftext|>"
@@ -1155,11 +1111,9 @@ pdfkit.from_string(html_text, output_filename)<|endoftext|>"
 1092,"<|endoftext|>Initialize a pandas series object `s` with columns `['A', 'B', 'A1R', 'B2', 'AABB4']`: s = pd.Series(['A', 'B', 'A1R', 'B2', 'AABB4'])<|endoftext|>"
 1093,"<|endoftext|>None: datetime.datetime.strptime('2007-03-04T21:08:12', '%Y-%m-%dT%H:%M:%S')<|endoftext|>"
 1094,<|endoftext|>sort list `a` using the first dimension of the element as the key to list `b`: a.sort(key=lambda x: b.index(x[0]))<|endoftext|>
-1095,
 1096,<|endoftext|>Save plot `plt` as png file 'filename.png': plt.savefig('filename.png')<|endoftext|>
 1097,"<|endoftext|>Save matplotlib graph to image file `filename.png` at a resolution of `300 dpi`: plt.savefig('filename.png', dpi=300)<|endoftext|>"
 1098,<|endoftext|>get output from process `p1`: p1.communicate()[0]<|endoftext|>
-1099,
 1100,<|endoftext|>searche in HTML string for elements that have text 'Python': soup.body.findAll(text='Python')<|endoftext|>
 1101,<|endoftext|>BeautifulSoup find string 'Python Jobs' in HTML body `body`: soup.body.findAll(text='Python Jobs')<|endoftext|>
 1102,"<|endoftext|>Sort items in dictionary `d`  using the first part of the key after splitting the key: sorted(list(d.items()), key=lambda name_num: (name_num[0].rsplit(None, 1)[0], name_num[1]))<|endoftext|>"
@@ -1204,7 +1158,6 @@ else:
 1132,<|endoftext|>filter a Django model `MyModel` to have charfield length of max `255`: MyModel.objects.extra(where=['CHAR_LENGTH(text) > 254'])<|endoftext|>
 1133,<|endoftext|>Filter queryset for all objects in Django model `MyModel` where texts length are greater than `254`: MyModel.objects.filter(text__regex='^.{254}.*')<|endoftext|>
 1134,"<|endoftext|>count the number of rows with missing values in a pandas dataframe `df`: sum(df.apply(lambda x: sum(x.isnull().values), axis=1) > 0)<|endoftext|>"
-1135,
 1136,"<|endoftext|>set the font 'Purisa' of size 12 for a canvas' text item `k`: canvas.create_text(x, y, font=('Purisa', 12), text=k)<|endoftext|>"
 1137,<|endoftext|>create a list containing all values associated with key 'baz' in dictionaries of list `foos` using list comprehension: [y['baz'] for x in foos for y in x['bar']]<|endoftext|>
 1138,"<|endoftext|>read pandas data frame csv `comma.csv` with extra commas in column specifying string delimiter `'`: df = pd.read_csv('comma.csv', quotechar=""'"")<|endoftext|>"
@@ -1235,7 +1188,6 @@ else:
 1161,<|endoftext|>find the mean of elements in list `l`: sum(l) / float(len(l))<|endoftext|>
 1162,"<|endoftext|>Find all the items from a dictionary `D` if the key contains the string `Light`: [(k, v) for k, v in D.items() if 'Light' in k]<|endoftext|>"
 1163,<|endoftext|>Get a md5 hash from string `thecakeisalie`: k = hashlib.md5('thecakeisalie').hexdigest()<|endoftext|>
-1164,
 1165,"<|endoftext|>sort datetime objects `birthdays` by `month` and `day`: birthdays.sort(key=lambda d: (d.month, d.day))<|endoftext|>"
 1166,<|endoftext|>extract table data from table `rows` using beautifulsoup: [[td.findNext(text=True) for td in tr.findAll('td')] for tr in rows]<|endoftext|>
 1167,"<|endoftext|>strip the string `.txt` from anywhere in the string `Boat.txt.txt`: """"""Boat.txt.txt"""""".replace('.txt', '')<|endoftext|>"
@@ -1243,9 +1195,7 @@ else:
 1169,<|endoftext|>get the row names from index in a pandas data frame: df.index<|endoftext|>
 1170,"<|endoftext|>create a list of all unique characters in string 'aaabcabccd': """""""""""".join(list(OrderedDict.fromkeys('aaabcabccd').keys()))<|endoftext|>"
 1171,<|endoftext|>get list of all unique characters in a string 'aaabcabccd': list(set('aaabcabccd'))<|endoftext|>
-1172,
 1173,"<|endoftext|>find rows with non zero values in a subset of columns where `df.dtypes` is not equal to `object` in pandas dataframe: df.loc[(df.loc[:, (df.dtypes != object)] != 0).any(1)]<|endoftext|>"
-1174,
 1175,"<|endoftext|>check if  dictionary `d` contains all keys in list `['somekey', 'someotherkey', 'somekeyggg']`: all(word in d for word in ['somekey', 'someotherkey', 'somekeyggg'])<|endoftext|>"
 1176,"<|endoftext|>hide output of subprocess `['espeak', text]`: subprocess.check_output(['espeak', text], stderr=subprocess.STDOUT)<|endoftext|>"
 1177,"<|endoftext|>replace nans by preceding values in pandas dataframe `df`: df.fillna(method='ffill', inplace=True)<|endoftext|>"
@@ -1341,7 +1291,6 @@ else:
 1259,<|endoftext|>get a list of the keys in each dictionary in a dictionary of dictionaries `foo`: [k for d in list(foo.values()) for k in d]<|endoftext|>
 1260,"<|endoftext|>get user input using message 'Enter name here: ' and insert it to the first placeholder in string 'Hello, {0}, how do you do?': print('Hello, {0}, how do you do?'.format(input('Enter name here: ')))<|endoftext|>"
 1261,"<|endoftext|>create pandas data frame `df` from txt file `filename.txt` with column `Region Name` and separator `;`: df = pd.read_csv('filename.txt', sep=';', names=['Region Name'])<|endoftext|>"
-1262,
 1263,<|endoftext|>get the platform OS name: platform.system()<|endoftext|>
 1264,"<|endoftext|>sort list `a` in ascending order based on its elements' float values: a = sorted(a, key=lambda x: float(x))<|endoftext|>"
 1265,"<|endoftext|>finding words in string `s` after keyword 'name': re.search('name (.*)', s)<|endoftext|>"
@@ -1357,7 +1306,6 @@ else:
 1275,"<|endoftext|>sort list of strings in list `the_list` by integer suffix: sorted(the_list, key=lambda k: int(k.split('_')[1]))<|endoftext|>"
 1276,"<|endoftext|>sort list of strings `the_list` by integer suffix before ""_"": sorted(the_list, key=lambda x: int(x.split('_')[1]))<|endoftext|>"
 1277,"<|endoftext|>make a list of lists in which each list `g` are the elements from list `test` which have the same characters up to the first `_` character: [list(g) for _, g in itertools.groupby(test, lambda x: x.split('_')[0])]<|endoftext|>"
-1278,
 1279,<|endoftext|>Load the url `http://www.google.com` in selenium webdriver `driver`: driver.get('http://www.google.com')<|endoftext|>
 1280,"<|endoftext|>using python's datetime module, get the year that utc-11 is currently in: (datetime.datetime.utcnow() - datetime.timedelta(hours=11)).year<|endoftext|>"
 1281,"<|endoftext|>Get the difference between two lists `[1, 2, 2, 2, 3]` and `[1, 2]` that may have duplicate values: Counter([1, 2, 2, 2, 3]) - Counter([1, 2])<|endoftext|>"
@@ -1387,7 +1335,6 @@ else:
 1304,"<|endoftext|>print '[1, 2, 3]': print('[%s, %s, %s]' % (1, 2, 3))<|endoftext|>"
 1305,"<|endoftext|>Display `1 2 3` as a list of string: print('[{0}, {1}, {2}]'.format(1, 2, 3))<|endoftext|>"
 1306,"<|endoftext|>get values from a dictionary `my_dict` whose key contains the string `Date`: [v for k, v in list(my_dict.items()) if 'Date' in k]<|endoftext|>"
-1307,
 1308,"<|endoftext|>drop a single subcolumn 'a' in column 'col1' from a dataframe `df`: df.drop(('col1', 'a'), axis=1)<|endoftext|>"
 1309,"<|endoftext|>dropping all columns named 'a' from a multiindex 'df', across all level.: df.drop('a', level=1, axis=1)<|endoftext|>"
 1310,<|endoftext|>build dictionary with keys of dictionary `_container` as keys and values of returned value of function `_value` with correlating key as parameter: {_key: _value(_key) for _key in _container}<|endoftext|>
@@ -1396,7 +1343,6 @@ else:
 1313,<|endoftext|>generate unique equal hash for equal dictionaries `a` and `b`: hash(pformat(a)) == hash(pformat(b))<|endoftext|>
 1314,"<|endoftext|>convert nested list of lists `[['tom', 'cat'], ['jerry', 'mouse'], ['spark', 'dog']]` into a list of tuples: list(map(tuple, [['tom', 'cat'], ['jerry', 'mouse'], ['spark', 'dog']]))<|endoftext|>"
 1315,"<|endoftext|>sum the column `positions` along the  other columns `stock`, `same1`, `same2` in a pandas data frame `df`: df.groupby(['stock', 'same1', 'same2'], as_index=False)['positions'].sum()<|endoftext|>"
-1316,
 1317,<|endoftext|>change string `s` to upper case: s.upper()<|endoftext|>
 1318,<|endoftext|>split a string `s` by ';' and convert to a dictionary: dict(item.split('=') for item in s.split(';'))<|endoftext|>
 1319,"<|endoftext|>Add header `('Cookie', 'cookiename=cookie value')` to mechanize browser `br`: br.addheaders = [('Cookie', 'cookiename=cookie value')]<|endoftext|>"
@@ -1430,7 +1376,6 @@ return False<|endoftext|>"
 1338,<|endoftext|>create a list containing the `n` next values of generator `it`: [next(it) for _ in range(n)]<|endoftext|>
 1339,"<|endoftext|>get list of n next values of a generator `it`: list(itertools.islice(it, 0, n, 1))<|endoftext|>"
 1340,<|endoftext|>compare two lists in python `a` and `b` and return matches: set(a).intersection(b)<|endoftext|>
-1341,
 1342,"<|endoftext|>convert list `data` into a string of its elements: print(''.join(map(str, data)))<|endoftext|>"
 1343,"<|endoftext|>match regex pattern '\\$[0-9]+[^\\$]*$' on string '$1 off delicious $5 ham.': re.match('\\$[0-9]+[^\\$]*$', '$1 off delicious $5 ham.')<|endoftext|>"
 1344,"<|endoftext|>import a nested module `c.py` within `b` within `a` with importlib: importlib.import_module('.c', 'a.b')<|endoftext|>"
@@ -1451,7 +1396,6 @@ return False<|endoftext|>"
 1359,<|endoftext|>Find all the lists from a lists of list 'items' if third element in all sub-lists is '0': [x for x in items if x[2] == 0]<|endoftext|>
 1360,"<|endoftext|>sort dictionary of dictionaries `dic` according to the key 'Fisher': sorted(list(dic.items()), key=lambda x: x[1]['Fisher'], reverse=True)<|endoftext|>"
 1361,"<|endoftext|>plot a data logarithmically in y axis: plt.yscale('log', nonposy='clip')<|endoftext|>"
-1362,
 1363,<|endoftext|>list the contents of a directory '/home/username/www/': os.listdir('/home/username/www/')<|endoftext|>
 1364,<|endoftext|>list all the contents of the directory 'path'.: os.listdir('path')<|endoftext|>
 1365,"<|endoftext|>merge a pandas data frame `distancesDF` and column `dates` in pandas data frame `datesDF` into single: pd.concat([distancesDF, datesDF.dates], axis=1)<|endoftext|>"
@@ -1477,7 +1421,6 @@ return False<|endoftext|>"
 1385,<|endoftext|>customize the time format in python logging: formatter = logging.Formatter('%(asctime)s;%(levelname)s;%(message)s')<|endoftext|>
 1386,"<|endoftext|>Replace comma with dot in a string `original_string` using regex: new_string = re.sub('""(\\d+),(\\d+)""', '\\1.\\2', original_string)<|endoftext|>"
 1387,<|endoftext|>call a function `otherfunc` inside a bash script `test.sh` using subprocess: subprocess.call('test.sh otherfunc')<|endoftext|>
-1388,
 1389,"<|endoftext|>remove multiple spaces in a string `foo`: """""" """""".join(foo.split())<|endoftext|>"
 1390,<|endoftext|>convert decimal 8 to a list of its binary values: list('{0:0b}'.format(8))<|endoftext|>
 1391,<|endoftext|>convert decimal integer 8 to a list of its binary values as elements: [int(x) for x in list('{0:0b}'.format(8))]<|endoftext|>
@@ -1541,7 +1484,6 @@ return False<|endoftext|>"
 1449,<|endoftext|>Selenium get the entire `driver` page text: driver.page_source<|endoftext|>
 1450,"<|endoftext|>extracting column `1` and `9` from array `data`: data[:, ([1, 9])]<|endoftext|>"
 1451,"<|endoftext|>remove all square brackets from string 'abcd[e]yth[ac]ytwec': re.sub('\\[.*?\\]', '', 'abcd[e]yth[ac]ytwec')<|endoftext|>"
-1452,
 1453,"<|endoftext|>find all substrings in string `mystring` composed only of letters `a` and `b` where each `a` is directly preceded and succeeded by `b`: re.findall('\\b(?:b+a)+b+\\b', mystring)<|endoftext|>"
 1454,<|endoftext|>convert list `lst` of tuples of floats to list `str_list` of tuples of strings of floats in scientific notation with eight decimal point precision: str_list = [tuple('{0:.8e}'.format(flt) for flt in sublist) for sublist in lst]<|endoftext|>
 1455,<|endoftext|>convert list of sublists `lst` of floats to a list of sublists `str_list` of strings of integers in scientific notation with 8 decimal points: str_list = [['{0:.8e}'.format(flt) for flt in sublist] for sublist in lst]<|endoftext|>
@@ -1655,7 +1597,6 @@ import file<|endoftext|>"
 1556,"<|endoftext|>Create a default empty json object if no json is available in request parameter `mydata`: json.loads(request.POST.get('mydata', '{}'))<|endoftext|>"
 1557,"<|endoftext|>get a list of tuples of every three consecutive items in list `[1, 2, 3, 4, 5, 6, 7, 8, 9]`: list(zip(*((iter([1, 2, 3, 4, 5, 6, 7, 8, 9]),) * 3)))<|endoftext|>"
 1558,"<|endoftext|>slice list `[1, 2, 3, 4, 5, 6, 7]` into lists of two elements each: list(grouper(2, [1, 2, 3, 4, 5, 6, 7]))<|endoftext|>"
-1559,
 1560,"<|endoftext|>Sort list `keys` based on its elements' dot-seperated numbers: keys.sort(key=lambda x: map(int, x.split('.')))<|endoftext|>"
 1561,<|endoftext|>Sort a list of integers `keys` where each value is in string format: keys.sort(key=lambda x: [int(y) for y in x.split('.')])<|endoftext|>
 1562,"<|endoftext|>convert a 3d array `img` of dimensions 4x2x3 to a 2d array   of dimensions 3x8: img.transpose(2, 0, 1).reshape(3, -1)<|endoftext|>"
@@ -1665,7 +1606,6 @@ import file<|endoftext|>"
 1566,"<|endoftext|>remove all non-alphabet chars from string `s`: """""""""""".join([i for i in s if i.isalpha()])<|endoftext|>"
 1567,<|endoftext|>split a string `s` into integers: l = (int(x) for x in s.split())<|endoftext|>
 1568,"<|endoftext|>split a string `42 0` by white spaces.: """"""42 0"""""".split()<|endoftext|>"
-1569,
 1570,"<|endoftext|>get indexes of all true boolean values from a list `bool_list`: [i for i, elem in enumerate(bool_list, 1) if elem]<|endoftext|>"
 1571,<|endoftext|>group dataframe `data` entries by year value of the date in column 'date': data.groupby(data['date'].map(lambda x: x.year))<|endoftext|>
 1572,"<|endoftext|>Get the indices in array `b` of each element appearing in array `a`: np.in1d(b, a).nonzero()[0]<|endoftext|>"
@@ -1695,7 +1635,6 @@ import file<|endoftext|>"
 1596,"<|endoftext|>order a list of lists `[[1, 'mike'], [1, 'bob']]` by the first value of individual list: sorted([[1, 'mike'], [1, 'bob']])<|endoftext|>"
 1597,"<|endoftext|>replace a string `Abc` in case sensitive way using maketrans: """"""Abc"""""".translate(maketrans('abcABC', 'defDEF'))<|endoftext|>"
 1598,"<|endoftext|>dictionary `d` to string, custom format: """"""<br/>"""""".join([('%s:: %s' % (key, value)) for key, value in list(d.items())])<|endoftext|>"
-1599,
 1600,<|endoftext|>clear terminal screen on windows: os.system('cls')<|endoftext|>
 1601,<|endoftext|>clear the terminal screen in Linux: os.system('clear')<|endoftext|>
 1602,<|endoftext|>execute external commands/script `your_own_script` with csh instead of bash: os.system('tcsh your_own_script')<|endoftext|>
@@ -1724,7 +1663,6 @@ import file<|endoftext|>"
 1625,"<|endoftext|>read csv file 'myfile.csv' into array: np.genfromtxt('myfile.csv', delimiter=',')<|endoftext|>"
 1626,"<|endoftext|>read csv file 'myfile.csv' into array: np.genfromtxt('myfile.csv', delimiter=',', dtype=None)<|endoftext|>"
 1627,<|endoftext|>read the first line of a string `my_string`: my_string.splitlines()[0]<|endoftext|>
-1628,
 1629,<|endoftext|>generate a list from a pandas dataframe `df` with the column name and column values: df.values.tolist()<|endoftext|>
 1630,"<|endoftext|>Replace repeated instances of a character '*' with a single instance in a string 'text': re.sub('\\*\\*+', '*', text)<|endoftext|>"
 1631,"<|endoftext|>replace repeated instances of ""*"" with a single instance of ""*"": re.sub('\\*+', '*', text)<|endoftext|>"
@@ -1753,7 +1691,6 @@ import file<|endoftext|>"
 1654,<|endoftext|>function to get the size of object: len()<|endoftext|>
 1655,<|endoftext|>get the size of list `s`: len(s)<|endoftext|>
 1656,"<|endoftext|>sort each row in a pandas dataframe `df` in descending order: df.sort(axis=1, ascending=False)<|endoftext|>"
-1657,
 1658,"<|endoftext|>get count of rows in each series grouped by column 'col5' and column 'col2' of dataframe `df`: df.groupby(['col5', 'col2']).size().groupby(level=1).max()<|endoftext|>"
 1659,"<|endoftext|>check if string 'x' is  in list `['x', 'd', 'a', 's', 'd', 's']`: 'x' in ['x', 'd', 'a', 's', 'd', 's']<|endoftext|>"
 1660,"<|endoftext|>Delete an item with key ""key"" from `mydict`: mydict.pop('key', None)<|endoftext|>"
@@ -1890,7 +1827,6 @@ except KeyError:
 1777,"<|endoftext|>request URL `url` using http header `{'referer': my_referer}`: requests.get(url, headers={'referer': my_referer})<|endoftext|>"
 1778,"<|endoftext|>set the y axis range to `0, 1000` in subplot using pylab: pylab.ylim([0, 1000])<|endoftext|>"
 1779,<|endoftext|>convert a column of list in series `s` to dummies: pd.get_dummies(s.apply(pd.Series).stack()).sum(level=0)<|endoftext|>
-1780,
 1781,"<|endoftext|>convert a hex string `x` to string: y = str(int(x, 16))<|endoftext|>"
 1782,<|endoftext|>check if string `a` is an integer: a.isdigit()<|endoftext|>
 1783,<|endoftext|>function to check if a string is a number: isdigit()<|endoftext|>
@@ -1913,7 +1849,6 @@ except KeyError:
 1800,<|endoftext|>removing control characters from a string `s`: return ''.join(ch for ch in s if unicodedata.category(ch)[0] != 'C')<|endoftext|>
 1801,"<|endoftext|>Compare if each value in list `a` is less than respective index value in list `b`: all(i < j for i, j in zip(a, b))<|endoftext|>"
 1802,<|endoftext|>python selenium click on button '.button.c_button.s_button': driver.find_element_by_css_selector('.button.c_button.s_button').click()<|endoftext|>
-1803,
 1804,<|endoftext|>kill a process `make.exe` from python script on windows: os.system('taskkill /im make.exe')<|endoftext|>
 1805,"<|endoftext|>SQLAlchemy select records of columns of table `my_table` in addition to current date column: print(select([my_table, func.current_date()]).execute())<|endoftext|>"
 1806,"<|endoftext|>remove duplicate characters from string 'ffffffbbbbbbbqqq': re.sub('([a-z])\\1+', '\\1', 'ffffffbbbbbbbqqq')<|endoftext|>"
@@ -1967,7 +1902,6 @@ then replace it with regex '<markup>\\1</markup>': re.sub('\\b(this|string)\\b',
 1850,"<|endoftext|>Convert dataframe `df` to a pivot table using column 'year', 'month', and 'item' as indexes: df.set_index(['year', 'month', 'item']).unstack(level=-1)<|endoftext|>"
 1851,"<|endoftext|>run a pivot with a multi-index `year` and `month` in a pandas data frame: df.pivot_table(values='value', index=['year', 'month'], columns='item')<|endoftext|>"
 1852,<|endoftext|>print a rational number `3/2`: print('\n\x1b[4m' + '3' + '\x1b[0m' + '\n2')<|endoftext|>
-1853,
 1854,"<|endoftext|>iterate backwards from 10 to 0: range(10, 0, -1)<|endoftext|>"
 1855,<|endoftext|>get value of first child of xml node `name`: name[0].firstChild.nodeValue<|endoftext|>
 1856,"<|endoftext|>start a new thread for `myfunction` with parameters 'MyStringHere' and 1: thread.start_new_thread(myfunction, ('MyStringHere', 1))<|endoftext|>"
@@ -1996,7 +1930,6 @@ platform.system()<|endoftext|>"
 1878,"<|endoftext|>get os version: import platform
 platform.release()<|endoftext|>"
 1879,<|endoftext|>get the name of the OS: print(os.name)<|endoftext|>
-1880,
 1881,"<|endoftext|>replace fields delimited by braces {} in string ""Day old bread, 50% sale {0}"" with string 'today': """"""Day old bread, 50% sale {0}"""""".format('today')<|endoftext|>"
 1882,"<|endoftext|>Get a minimum value from a list of tuples `list` with values of type `string` and `float` with nan: min(list, key=lambda x: float('inf') if math.isnan(x[1]) else x[1])<|endoftext|>"
 1883,<|endoftext|>Find average of a nested list `a`: a = [(sum(x) / len(x)) for x in zip(*a)]<|endoftext|>
@@ -2030,7 +1963,6 @@ platform.release()<|endoftext|>"
 1907,"<|endoftext|>get top `3` items from a dictionary `mydict` with largest sum of values: heapq.nlargest(3, iter(mydict.items()), key=lambda tup: sum(tup[1]))<|endoftext|>"
 1908,"<|endoftext|>get index of character 'b' in list '['a', 'b']': ['a', 'b'].index('b')<|endoftext|>"
 1909,"<|endoftext|>set font size of axis legend of plot `plt` to 'xx-small': plt.setp(legend.get_title(), fontsize='xx-small')<|endoftext|>"
-1910,
 1911,<|endoftext|>extract the 2nd elements from a list of tuples: [x[1] for x in elements]<|endoftext|>
 1912,<|endoftext|>get the opposite diagonal of a numpy array `array`: np.diag(np.rot90(array))<|endoftext|>
 1913,<|endoftext|>flatten list of tuples `a`: list(chain.from_iterable(a))<|endoftext|>
@@ -2067,7 +1999,6 @@ platform.release()<|endoftext|>"
 1944,"<|endoftext|>call a Python script ""test2.py"": exec(compile(open('test2.py').read(), 'test2.py', 'exec'))<|endoftext|>"
 1945,"<|endoftext|>call a Python script ""test1.py"": subprocess.call('test1.py', shell=True)<|endoftext|>"
 1946,"<|endoftext|>sort a zipped list `zipped` using lambda function: sorted(zipped, key=lambda x: x[1])<|endoftext|>"
-1947,
 1948,"<|endoftext|>sort a dictionary `y` by value then by key: sorted(list(y.items()), key=lambda x: (x[1], x[0]), reverse=True)<|endoftext|>"
 1949,"<|endoftext|>using beautifulsoup to select div blocks within html `soup`: soup.find_all('div', class_='crBlock ')<|endoftext|>"
 1950,"<|endoftext|>remove elements from list `centroids` the indexes of which are in array `index`: [element for i, element in enumerate(centroids) if i not in index]<|endoftext|>"
@@ -2085,7 +2016,6 @@ testfile.retrieve('http://randomsite.com/file.gz', 'file.gz')<|endoftext|>"
 1961,<|endoftext|>convert a list of dictionaries `d` to pandas data frame: pd.DataFrame(d)<|endoftext|>
 1962,"<|endoftext|>split string ""This is a string"" into words that do not contain whitespaces: """"""This is a string"""""".split()<|endoftext|>"
 1963,"<|endoftext|>split string ""This     is a     string"" into words that does not contain whitespaces: """"""This     is a     string"""""".split()<|endoftext|>"
-1964,
 1965,<|endoftext|>remove all duplicate items from a list `lseperatedOrblist`: woduplicates = list(set(lseperatedOrblist))<|endoftext|>
 1966,"<|endoftext|>sum of product of combinations in a list `l`: sum([(i * j) for i, j in list(itertools.combinations(l, 2))])<|endoftext|>"
 1967,<|endoftext|>regular expression for validating string 'user' containing a sequence of characters ending with '-' followed by any number of digits.: re.compile('{}-\\d*'.format(user))<|endoftext|>
@@ -2171,7 +2101,6 @@ reduce(lambda x, y: x * y, [1, 2, 3, 4, 5, 6])<|endoftext|>"
 2046,<|endoftext|>Convert nested list `x` into a flat list: [j for i in x for j in i]<|endoftext|>
 2047,<|endoftext|>get each value from a list of lists `a` using itertools: print(list(itertools.chain.from_iterable(a)))<|endoftext|>
 2048,"<|endoftext|>convert date string 'January 11, 2010'  into day of week: datetime.datetime.strptime('January 11, 2010', '%B %d, %Y').strftime('%A')<|endoftext|>"
-2049,
 2050,"<|endoftext|>remove item ""b"" in list `a`: a.remove('b')<|endoftext|>"
 2051,<|endoftext|>remove item `c` in list `a`: a.remove(c)<|endoftext|>
 2052,<|endoftext|>delete the element 6 from list `a`: a.remove(6)<|endoftext|>
@@ -2269,7 +2198,6 @@ print((psutil.virtual_memory()))<|endoftext|>"
 2136,"<|endoftext|>convert binary string to numpy array: np.fromstring('\x00\x00\x80?\x00\x00\x00@\x00\x00@@\x00\x00\x80@', dtype='>f4')<|endoftext|>"
 2137,"<|endoftext|>insert variables `(var1, var2, var3)` into sql statement 'INSERT INTO table VALUES (?, ?, ?)': cursor.execute('INSERT INTO table VALUES (?, ?, ?)', (var1, var2, var3))<|endoftext|>"
 2138,"<|endoftext|>Execute a sql statement using variables `var1`, `var2` and `var3`: cursor.execute('INSERT INTO table VALUES (%s, %s, %s)', (var1, var2, var3))<|endoftext|>"
-2139,
 2140,"<|endoftext|>pandas split strings in column 'stats' by ',' into columns in dataframe `df`: df['stats'].str[1:-1].str.split(',', expand=True).astype(float)<|endoftext|>"
 2141,"<|endoftext|>split string in column 'stats' by ',' into separate columns in dataframe `df`: df['stats'].str[1:-1].str.split(',').apply(pd.Series).astype(float)<|endoftext|>"
 2142,<|endoftext|>Unpack column 'stats' in dataframe `df` into a series of columns: df['stats'].apply(pd.Series)<|endoftext|>
@@ -2286,7 +2214,6 @@ print((psutil.virtual_memory()))<|endoftext|>"
 2153,"<|endoftext|>remove extra white spaces & tabs from a string `s`: """""" """""".join(s.split())<|endoftext|>"
 2154,"<|endoftext|>replace comma in string `s` with empty string '': s = s.replace(',', '')<|endoftext|>"
 2155,"<|endoftext|>Resample dataframe `frame` to resolution of 1 hour `1H` for timeseries index, summing values in the column `radiation` averaging those in column `tamb`: frame.resample('1H').agg({'radiation': np.sum, 'tamb': np.mean})<|endoftext|>"
-2156,
 2157,"<|endoftext|>create a pandas dataframe `df` from elements of a dictionary `nvalues`: df = pd.DataFrame.from_dict({k: v for k, v in list(nvalues.items()) if k != 'y3'})<|endoftext|>"
 2158,<|endoftext|>Flask get value of request variable 'firstname': first_name = request.args.get('firstname')<|endoftext|>
 2159,<|endoftext|>Flask get posted form data 'firstname': first_name = request.form.get('firstname')<|endoftext|>
@@ -2399,7 +2326,6 @@ except ValueError:
 2259,<|endoftext|>select records of dataframe `df` where the sum of column 'X' for each value in column 'User' is 0: df.groupby('User')['X'].filter(lambda x: x.sum() == 0)<|endoftext|>
 2260,<|endoftext|>Get data of dataframe `df` where the sum of column 'X' grouped by column 'User' is equal to 0: df.loc[df.groupby('User')['X'].transform(sum) == 0]<|endoftext|>
 2261,<|endoftext|>Get data from dataframe `df` where column 'X' is equal to 0: df.groupby('User')['X'].transform(sum) == 0<|endoftext|>
-2262,
 2263,"<|endoftext|>convert pandas group by object to multi-indexed dataframe with indices 'Name' and 'Destination': df.set_index(['Name', 'Destination'])<|endoftext|>"
 2264,"<|endoftext|>coalesce non-word-characters in string `a`: print(re.sub('(\\W)\\1+', '\\1', a))<|endoftext|>"
 2265,"<|endoftext|>open a file ""$file"" under Unix: os.system('start ""$file""')<|endoftext|>"
@@ -2408,7 +2334,6 @@ except ValueError:
 2268,"<|endoftext|>create a list `files` containing all files in directory '.' that starts with numbers between 0 and 9 and ends with the extension '.jpg': files = [f for f in os.listdir('.') if re.match('[0-9]+.*\\.jpg', f)]<|endoftext|>"
 2269,"<|endoftext|>adding a 1-d array `[1, 2, 3, 4, 5, 6, 7, 8, 9]` to a 3-d array `np.zeros((6, 9, 20))`: np.zeros((6, 9, 20)) + np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])[(None), :, (None)]<|endoftext|>"
 2270,"<|endoftext|>add array of shape `(6, 9, 20)` to array `[1, 2, 3, 4, 5, 6, 7, 8, 9]`: np.zeros((6, 9, 20)) + np.array([1, 2, 3, 4, 5, 6, 7, 8, 9]).reshape((1, 9, 1))<|endoftext|>"
-2271,
 2272,"<|endoftext|>get the list with the highest sum value in list `x`: print(max(x, key=sum))<|endoftext|>"
 2273,<|endoftext|>sum the length of lists in list `x` that are more than 1 item in length: sum(len(y) for y in x if len(y) > 1)<|endoftext|>
 2274,"<|endoftext|>Enclose numbers in quotes in a string `This is number 1 and this is number 22`: re.sub('(\\d+)', '""\\1""', 'This is number 1 and this is number 22')<|endoftext|>"
@@ -2430,7 +2355,6 @@ except ValueError:
 2290,"<|endoftext|>logoff computer having windows operating system using python: subprocess.call(['shutdown', '/l '])<|endoftext|>"
 2291,"<|endoftext|>shutdown and restart a computer running windows from script: subprocess.call(['shutdown', '/r'])<|endoftext|>"
 2292,"<|endoftext|>erase the contents of a file `filename`: open('filename', 'w').close()<|endoftext|>"
-2293,
 2294,<|endoftext|>convert dataframe `df` to list of dictionaries including the index values: df.to_dict('index')<|endoftext|>
 2295,<|endoftext|>Create list of dictionaries from pandas dataframe `df`: df.to_dict('records')<|endoftext|>
 2296,<|endoftext|>Group a pandas data frame by monthly frequenct `M` using groupby: df.groupby(pd.TimeGrouper(freq='M'))<|endoftext|>
@@ -2438,7 +2362,6 @@ except ValueError:
 2298,"<|endoftext|>sort dict `data` by value: sorted(data, key=data.get)<|endoftext|>"
 2299,<|endoftext|>Sort a dictionary `data` by its values: sorted(data.values())<|endoftext|>
 2300,"<|endoftext|>Get a list of pairs of key-value sorted by values in dictionary `data`: sorted(list(data.items()), key=lambda x: x[1])<|endoftext|>"
-2301,
 2302,<|endoftext|>display current time: now = datetime.datetime.now().strftime('%H:%M:%S')<|endoftext|>
 2303,"<|endoftext|>find the index of the second occurrence of the substring `bar` in string `foo bar bar bar`: """"""foo bar bar bar"""""".replace('bar', 'XXX', 1).find('bar')<|endoftext|>"
 2304,"<|endoftext|>check if key 'stackoverflow' and key 'google' are presented in dictionary `sites`: set(['stackoverflow', 'google']).issubset(sites)<|endoftext|>"
@@ -2460,7 +2383,6 @@ except ValueError:
 2319,<|endoftext|>convert strings in list-of-lists `lst` to ints: [[int(x) for x in sublist] for sublist in lst]<|endoftext|>
 2320,"<|endoftext|>get index of elements in array `A` that occur in another array `B`: np.where(np.in1d(A, B))[0]<|endoftext|>"
 2321,"<|endoftext|>create a list where each element is a dictionary with keys 'key1' and 'key2' and values corresponding to each value in the lists referenced by keys 'key1' and 'key2' in dictionary `d`: [{'key1': a, 'key2': b} for a, b in zip(d['key1'], d['key2'])]<|endoftext|>"
-2322,
 2323,"<|endoftext|>Get Last Day of the first month in 2002: calendar.monthrange(2002, 1)<|endoftext|>"
 2324,"<|endoftext|>Get Last Day of the second month in 2002: calendar.monthrange(2008, 2)<|endoftext|>"
 2325,"<|endoftext|>Get Last Day of the second month in 2100: calendar.monthrange(2100, 2)<|endoftext|>"
@@ -2511,7 +2433,6 @@ retval = p.wait()<|endoftext|>"
 2366,"<|endoftext|>Rearrange the columns 'a','b','x','y' of pandas DataFrame `df` in mentioned sequence 'x' ,'y','a' ,'b': df = df[['x', 'y', 'a', 'b']]<|endoftext|>"
 2367,"<|endoftext|>call base class's __init__ method from the child class `ChildClass`: super(ChildClass, self).__init__(*args, **kwargs)<|endoftext|>"
 2368,<|endoftext|>sum of all values in a python dict `d`: sum(d.values())<|endoftext|>
-2369,
 2370,"<|endoftext|>convert python dictionary `your_data` to json array: json.dumps(your_data, ensure_ascii=False)<|endoftext|>"
 2371,"<|endoftext|>assign an array of floats in range from 0 to 100 to a variable `values`: values = np.array([i for i in range(100)], dtype=np.float64)<|endoftext|>"
 2372,"<|endoftext|>sort a list of dictionaries `list_of_dct` by values in an order `order`: sorted(list_of_dct, key=lambda x: order.index(list(x.values())[0]))<|endoftext|>"

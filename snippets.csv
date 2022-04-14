@@ -429,7 +429,7 @@ output
  os.walk('/mydir')<|endoftext|>
  os.walk('/mydir')<|endoftext|>
 " df.style.set_properties([('legend',{'alignment':'center'})])<|endoftext|>"
-                                                                                                                                                                                                        
+"range = (x for x in socket.getaddrinfo('192.168.x.x', 80)"                                                                                                                                                                                                         
 " subprocess.call('ping -n 1 192.168.0.', shell=True)<|endoftext|>"
 " os.system(' '.join(map(int, socket.inet_aton(r'192.168.0.' + str(x))))))<|endoftext|>"
  sum([int(b) for b in bin(x)])<|endoftext|>
@@ -499,3 +499,4 @@ output
 " f = open(path, 'r')<|endoftext|>"
  [data[i] for i in range(len(data))]<|endoftext|>
  a.ravel().append(1)<|endoftext|>
+ 

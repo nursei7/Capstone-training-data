@@ -1,4 +1,4 @@
-,text
+Unnamed: 0,text
 0,"<|endoftext|>A student learning Python was trying to make a function that sorts all the letters of a word, but their code is broken, and they can't figure out why.
 Spot and fix the error(s) in the code to make the function work. As an added challenge for those who are more advanced, see if you can shrink (the fixed version of) the student's code down to only a single line.
 Examples
@@ -3569,7 +3569,6 @@ print(maxTripletSum(arr, n))
 
 # This code is contributed by Nikita Tiwari.<|endoftext|>"
 81,"<|endoftext|>Swapping refers to the exchange of two elements, this is usually done with a list. In this section, we see various methods to python swap list elements. The list is a container that stores elements of similar data types.:# python program to swap two elements in a list # user-defined function def swap(l, p1, p2): l[p1], l[p2] = l[p2], l[p1] return l # take inputs l = [10, 34, 17, 18] # print new list p1, p2 = 1, 2 print(swap(l, p1-1, p2-1))<|endoftext|>"
-82,
 83,"<|endoftext|>What is the procedure for performing a Python increment operation? You might want to try extending a comparable increment functionality to Python if you’re coming from a language like C++ or Java.
 
 However, as we will see later in this essay, this is not the case. Let’s have a look at how we may use Python’s Increment (++) operation to achieve comparable results.:# given number
@@ -4398,7 +4397,6 @@ Notes
 Precent probability of event = 100 * (num of favourable outcomes) / (total num of possible outcomes)
 The numbers in the list are uniformly distributed, and have an equal chance of being chosen.:def probability(lst, n):
   return round(sum(1 for x in lst if x >= n) / len(lst) * 100, 1)<|endoftext|>"
-103,
 104,"<|endoftext|>Briscola is an Italian card game, played with a deck of 40 cards that has four suits (hearts, diamonds, clubs, and spades), so that there are ten cards per suit: the Ace, the numbered cards from 2 up to 7, and the three face-cards (Jack, Queen, and King). In this challenge, the notation used for the cards is a string containing the card value (with the upper-case initial for face-cards) and the lower-case initial for suits, as in the examples below:
 Ah = Ace of Hearts
 2s = Two of Spades
@@ -12663,7 +12661,6 @@ for m in range(1, numbrrows+1):
             print(n, end=' ')
     # Print the Newline character after the end of the inner loop.
     print()<|endoftext|>"
-322,
 323,"<|endoftext|>Given a Binary Tree where each node has the following structure, write a function to populate the next pointer for all nodes. The next pointer for every node should be set to point to inorder successor.:# class Node
 class Node:
 	def __init__(self, data):
@@ -16999,8 +16996,6 @@ alist = [int(x) for x in alist]
 merge_sort(alist, 0, len(alist))
 print('Sorted list: ', end='')
 print(alist)<|endoftext|>"
-423,
-424,
 425,"<|endoftext|>You are given a 2D integer array groups of length n. You are also given an integer array nums.
 You are asked if you can choose n disjoint subarrays from the array nums such that the ith subarray is equal to groups[i] (0-indexed), and if i > 0, the (i-1)th subarray appears before the ith subarray in nums (i.e. the subarrays must be in the same order as groups).
 Return true if you can do this task, and false otherwise.
@@ -18612,7 +18607,6 @@ if __name__ == '__main__':
   
 # This code is contributed by mohit kumar 29
 <|endoftext|>"
-469,
 470,"<|endoftext|>Output Variables:x = ""Python is awesome""
 print(x)<|endoftext|>"
 471,"<|endoftext|>Swap all Odd and Even Bits of a Number (Static Input):# Give the number as static input and store it in a variable.
@@ -30387,7 +30381,6 @@ for i in list1:
     # if it is true then it is strong number then return true
     if(totalSum == tempNum):
         print(tempNum, end=' ')<|endoftext|>"
-772,
 773,"<|endoftext|>Create a function that takes a string as an argument and returns True if each letter in the string is surrounded by a plus sign. Return False otherwise.
 Examples
 plus_sign(""+f+d+c+#+f+"") ➞ True
@@ -31461,7 +31454,6 @@ else:
     # number is Not divisible by the another given number k.
     print(""The sum of digits at odd places of the given number{"", gvn_numb,
           ""} is not divisible by the another given number k{"", gvn_k, ""}"")<|endoftext|>"
-800,
 801,"<|endoftext|>Given two numbers a, b and the task is to find all x such that given a % x = b
 
 Examples:
@@ -33784,7 +33776,6 @@ Return all lonely numbers in nums. You may return the answer in any order.
             res.append(k)
                    
         return res<|endoftext|>"
-857,
 858,"<|endoftext|>There are n cities and there are roads in between some of the cities. Somehow all the roads are damaged simultaneously. We have to repair the roads to connect the cities again. There is a fixed cost to repair a particular road. Find out the minimum cost to connect all the cities by repairing roads. Input is in matrix(city) form, if city[i][j] = 0 then there is not any road between city i and city j, if city[i][j] = a > 0 then the cost to rebuild the path between city i and city j is a. Print out the minimum cost to connect all the cities. 
 It is sure that all the cities were connected before the roads were damaged.:# Python3 code to find out minimum cost
 # path to connect all the cities
@@ -36929,7 +36920,6 @@ else:
  # Passing the given list of tuples to sortlastElementTuple function
  
  print(sortlastElementTuple(listofTuples))<|endoftext|>"
-934,
 935,"<|endoftext|>Given an integer ‘x’, write a C function that returns true if binary representation of x is palindrome else return false.
 For example a numbers with binary representation as 10..01 is palindrome and number with binary representation as 10..00 is not palindrome.
 The idea is similar to checking a string is palindrome or not. We start from leftmost and rightmost bits and compare bits one by one. If we find a mismatch, then return false. 
@@ -37776,7 +37766,6 @@ numb.sort()
 # print the list ""numb"" to print the numbers with the digits 1, 2, and 3 in ascending order,
 # which is separated by commas.
 print(""The numbers with the digits 1, 2, and 3 in ascending order, which is separated by commas= "", numb)<|endoftext|>"
-954,
 955,"<|endoftext|>In the previous article, we have discussed Python Program to Find the Sum of all Elements in a 2D Array
  
  Given a matrix and the task is to find the sum of an upper triangular matrix of the given matrix in Python.
@@ -39829,7 +39818,6 @@ N/A:def consecutive_sum(n):
     res = 2 ** i
     i += 1
   return res != n<|endoftext|>"
-1004,
 1005,"<|endoftext|>Character recognition software often makes mistakes when documents (especially old ones written with a typewriter) are digitized.
 
 Your task is to correct the errors in the digitized text. You only have to handle the following mistakes:
@@ -44420,7 +44408,6 @@ The given lateral surface area of a Cube with side lngth [ 4 ]= 64.000:# Give th
  # Print the lateral surface area of a given cube.
  print(
   ""The given lateral surface area of a Cube with side lngth ["", cube_side, ""]= %.3f"" % Laterl_surfcarea)<|endoftext|>"
-1128,
 1129,"<|endoftext|>Instructions
 Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors. A factor is a number that evenly divides into another number, leaving no remainder. The simplest way to test if one number is a factor of another is to use the modulo operation.
 
